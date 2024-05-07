@@ -1,0 +1,366 @@
+% Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
+% Copyright 2014 Mark Szepieniec <http://github.com/mszep>
+% 
+% ConText style for making a resume with pandoc. Inspired by moderncv.
+% 
+% This CSS document is delivered to you under the CC BY-SA 3.0 License.
+% https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+
+\startmode[*mkii]
+  \enableregime[utf-8]  
+  \setupcolors[state=start]
+\stopmode
+
+\setupcolor[hex]
+\definecolor[titlegrey][h=757575]
+\definecolor[sectioncolor][h=397249]
+\definecolor[rulecolor][h=9cb770]
+
+% Enable hyperlinks
+\setupinteraction[state=start, color=sectioncolor]
+
+\setuppapersize [A4][A4]
+\setuplayout    [width=middle, height=middle,
+                 backspace=20mm, cutspace=0mm,
+                 topspace=10mm, bottomspace=20mm,
+                 header=0mm, footer=0mm]
+
+%\setuppagenumbering[location={footer,center}]
+
+\setupbodyfont[11pt, helvetica]
+
+\setupwhitespace[medium]
+
+\setupblackrules[width=31mm, color=rulecolor]
+
+\setuphead[chapter]      [style=\tfd]
+\setuphead[section]      [style=\tfd\bf, color=titlegrey, align=middle]
+\setuphead[subsection]   [style=\tfb\bf, color=sectioncolor, align=right,
+                          before={\leavevmode\blackrule\hspace}]
+\setuphead[subsubsection][style=\bf]
+
+\setuphead[chapter, section, subsection, subsubsection][number=no]
+
+%\setupdescriptions[width=10mm]
+
+\definedescription
+  [description]
+  [headstyle=bold, style=normal,
+   location=hanging, width=18mm, distance=14mm, margin=0cm]
+
+\setupitemize[autointro, packed]    % prevent orphan list intro
+\setupitemize[indentnext=no]
+
+\defineitemgroup[enumerate]
+\setupenumerate[each][fit][itemalign=left,distance=.5em,style={\feature[+][default:tnum]}]
+
+\setupfloat[figure][default={here,nonumber}]
+\setupfloat[table][default={here,nonumber}]
+
+\setuptables[textwidth=max, HL=none]
+\setupxtable[frame=off,option={stretch,width}]
+
+\setupthinrules[width=15em] % width of horizontal rules
+
+\setupdelimitedtext
+  [blockquote]
+  [before={\setupalign[middle]},
+   indentnext=no,
+  ]
+
+
+\starttext
+
+\startsectionlevel[title={Steve Kaminczak},reference={steve-kaminczak}]
+
+16303 Lyons School Rd. \#108\crlf
+Spring, TX 77379\crlf
+(979) 436-5969\crlf
+kaminczak@gmail.com
+
+\startsectionlevel[title={Education},reference={education}]
+
+\startitemize[packed]
+\item
+  {\bf Sam Houston State University}\crlf
+  Master of Arts, English, August 2004
+  \startitemize[packed]
+  \item
+    GPA: 3.9/4.0
+  \stopitemize
+\item
+  {\bf Sam Houston State University}\crlf
+  Bachelor of Arts, English, May 2001
+  \startitemize[packed]
+  \item
+    GPA: 3.6/4.0
+  \stopitemize
+\stopitemize
+
+\stopsectionlevel
+
+\startsectionlevel[title={Administrative
+Positions},reference={administrative-positions}]
+
+\startitemize[packed]
+\item
+  {\bf Lone Star College-CyFair Teaching and Learning Center}\crlf
+  Program Manager III, 2013-2015
+\item
+  {\bf Texas A&M University Writing Center}\crlf
+  Assistant Director, 2007-2012
+\item
+  {\bf Sam Houston State Writing Center}\crlf
+  Assistant Director, 2005-2007
+\stopitemize
+
+\stopsectionlevel
+
+\startsectionlevel[title={Teaching Experience -
+Secondary},reference={teaching-experience---secondary}]
+
+\startitemize[packed]
+\item
+  {\bf Westbury HS}\crlf
+  ELAR Instructor, 2020-Present
+  \startitemize[packed]
+  \item
+    Currently teaching several classes of Reading III & Literary
+    Genres.\crlf
+  \item
+    T-TESS Rating: Proficient
+  \stopitemize
+\item
+  {\bf Houston Can Academy}\crlf
+  ELA Instructor, 2015-2020
+  \startitemize[packed]
+  \item
+    Served on Campus Instructional Leadership~Team~(CILT) to improve
+    campus climate and accountability.
+  \item
+    Collaborated with a team of three to successfully elevate the Hobby
+    and Southwest campuses from TEA probationary status to full
+    compliance.
+  \stopitemize
+\stopitemize
+
+\stopsectionlevel
+
+\startsectionlevel[title={Teaching Experience -
+Post-Secondary},reference={teaching-experience---post-secondary}]
+
+\startitemize[packed]
+\item
+  {\bf Lone Star College System (Cy Fair)} Department of English,
+  2001-2003, 2013-2015
+  \startitemize[packed]
+  \item
+    Courses Taught: Freshman Composition I
+  \stopitemize
+\item
+  {\bf Texas A&M University} University Writing Center, 2007-2012
+  \startitemize[packed]
+  \item
+    Taught one-credit tutor preparation course
+  \stopitemize
+\item
+  {\bf Sam Houston State University} English Language Institute,
+  2005-2007
+  \startitemize[packed]
+  \item
+    Developed and taught course on TOEFL preparation
+  \item
+    Created {\em Talk Time}, a weekly workshop where through
+    conversation, ESL students and writing tutors were matched to
+    acclimate international students to the university Department of
+    English, 2002-2007
+  \item
+    Courses Taught: Developmental Writing, Freshman Composition I,
+    Madness in Fiction (special topics course), 2002-2007
+  \stopitemize
+\stopitemize
+
+\stopsectionlevel
+
+\startsectionlevel[title={Editing and Publishing
+Experience},reference={editing-and-publishing-experience}]
+
+\startitemize[packed]
+\item
+  {\bf The Writing Lab Newsletter} Reviewer, 2008-2009
+\item
+  {\bf Texas Review Press} Assistant to the Editor, 1996-2006
+\item
+  {\bf SHSU Writing Across the Curriculum Newsletter} Production Editor,
+  1999-2000
+\stopitemize
+
+\stopsectionlevel
+
+\startsectionlevel[title={Conference
+Presentations},reference={conference-presentations}]
+
+\startitemize[packed]
+\item
+  {\bf Texas Distance Learning Association}, San Antonio, 2015
+  \startitemize[packed]
+  \item
+    {\em Providing Writing Assistance Online to All Students} With
+    Candace Schaefer, Valerie Balester, and Stephanie Leary
+  \stopitemize
+\item
+  {\bf Texas A&M Assessment Conference}, College Station, 2011
+  \startitemize[packed]
+  \item
+    {\em Designing Assessment Methods for a W Course in Agricultural
+    Systems Management: Successes and Failures} With Steve Searcy, Clyde
+    Munster, Candace Schaefer, and Valerie Balester
+  \stopitemize
+\item
+  {\bf Computers and Writing}, Ann Arbor, 2011
+  \startitemize[packed]
+  \item
+    {\em Making Innovation Public: Resources for DIY, Modification, and
+    Sharing of Writing Center Technologies} With Matthew Gilchrist, Kim
+    Abels, Dennis Bennett, Shareen Grogan, and Tammy Conard-Salvo
+  \stopitemize
+\item
+  {\bf Academic Peer Educator Conference}, College Station, 2011
+  \startitemize[packed]
+  \item
+    {\em Pirates vs.~Ninjas: Two Styles of Teaching} With Allie Mitchell
+  \stopitemize
+\item
+  {\bf Teaching with Technology}, College Station, 2011
+  \startitemize[packed]
+  \item
+    {\em Using TurnItIn to Teach Source Integration} With Candace
+    Schaefer
+  \stopitemize
+\item
+  {\bf International Writing Center Association}, Baltimore, 2010
+  \startitemize[packed]
+  \item
+    {\em Navigating Technology and Innovation in Writing Centers} With
+    Matthew Gilchrist, Kim Abels, Tabetha Adkins, Dennis Bennett,
+    Shareen Grogan, and Tammy Conard-Salvo
+  \stopitemize
+\item
+  {\bf South Central Writing Centers Association}, Lake Charles, 2010
+  \startitemize[packed]
+  \item
+    {\em Through Mazes Running: The Hidden Soul of Harmony: Diversity
+    within the TAMU Writing Center} With Patricia Droz
+  \stopitemize
+\item
+  {\bf Teaching with Technology}, College Station, 2010
+  \startitemize[packed]
+  \item
+    {\em Developing a Scheduling/Reporting Tool for Learning in the
+    University Writing Center} With Candace Schaefer and Stephanie Leary
+  \stopitemize
+\item
+  {\bf Academic Peer Educator Conference}, College Station, 2009
+  \startitemize[packed]
+  \item
+    {\em Web 2.0: Tools for Peer Educators}
+  \stopitemize
+\item
+  {\bf Conference on College Composition and Communication}, New York,
+  2007
+  \startitemize[packed]
+  \item
+    {\em Teacher or Editor? Tutor Identity Negotiation in the Writing
+    Center} With Diane Dowdey and Frances Crawford Fennessy
+  \stopitemize
+\item
+  {\bf International Writing Center Association}, Houston, 2007
+  \startitemize[packed]
+  \item
+    {\em Putting Plato and Aristotle to Work: Using Classical Rhetoric
+    in Writing Centers} With John Paul Ewing and David Sweeten
+  \stopitemize
+\item
+  {\bf South Central Writing Centers Association}, Little Rock, 2006
+  \startitemize[packed]
+  \item
+    {\em Tutors to Teachers: How Methods Evolve} With Barbara Jones,
+    Deborah Greene, and Jon Nelson
+  \stopitemize
+\item
+  {\bf College English Association}, San Antonio, 2006
+  \startitemize[packed]
+  \item
+    {\em Tutors to Teachers: How Methods Evolve} With Barbara Jones and
+    Deborah Greene
+  \stopitemize
+\item
+  {\bf College Academic Support Programs Conference}, Houston, 2001
+  \startitemize[packed]
+  \item
+    {\em The Five W's and H: Recruiting, Selecting, and Training
+    Consultants} With Patricia Williams and Paulette Golden
+  \stopitemize
+\stopitemize
+
+\stopsectionlevel
+
+\startsectionlevel[title={Certifications and
+Training},reference={certifications-and-training}]
+
+\startitemize[packed]
+\item
+  {\bf College Reading and Learning Association}, {\em Master Level},
+  2000
+\item
+  {\bf Diversity Training Institute, Office of the Vice President &
+  Assoc. Provost for Diversity}, {\em Certified}, 2009
+\item
+  {\bf Group Leadership Forum, Employee and Organizational Development
+  at Texas A&M}, {\em Completed}, 2009
+\item
+  {\bf Adjunct Certification Program, Lone Star College - Cy Fair}, {\em
+  Certified}, 2014
+\item
+  {\bf Texas ELA (K-12), Alternative Certification for Teachers}, {\em
+  Certified}, 2016
+\stopitemize
+
+\stopsectionlevel
+
+\startsectionlevel[title={Skills},reference={skills}]
+
+\startitemize[packed]
+\item
+  {\bf Language:} English (Native), Spanish (Reading: basic, Speaking:
+  basic)
+\item
+  {\bf Technical:} H5P, Scorm, Markdown, LaTex
+\item
+  {\bf Educational Technology:} Articulate Studio, Adobe Captivate,
+  Camtasia, Ispring Suite
+\stopitemize
+
+\stopsectionlevel
+
+\startsectionlevel[title={Professional
+Societies},reference={professional-societies}]
+
+\startitemize[packed]
+\item
+  {\bf Houston Federation of Teachers}
+\item
+  {\bf College Reading and Learning Association}
+\item
+  {\bf International Writing Center Association}
+\item
+  {\bf National Council of Teachers of English}
+\item
+  {\bf Sigma Tau Delta}
+\stopitemize
+
+\stopsectionlevel
+
+\stopsectionlevel
+
+\stoptext
