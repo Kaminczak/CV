@@ -6,21 +6,39 @@
     <title>Steve Kaminczak - CV</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            color: #333;
+            padding: 40px 20px;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
         h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            color: #1a5490;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 600;
         }
         h2 {
             color: #2980b9;
-            margin-top: 30px;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        h2:first-of-type {
+            border-top: none;
+            margin-top: 20px;
         }
         h3 {
             color: #34495e;
@@ -30,14 +48,50 @@
             padding-left: 0;
         }
         li {
-            margin-bottom: 5px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        li:before {
+            content: "▸";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        li strong {
+            color: #1a5490;
+            font-size: 1.05em;
         }
         .contact-info {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f0f7fb;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+        .contact-info p {
+            margin: 0;
+            line-height: 1.8;
+        }
+        .summary-section {
+            background-color: #f8fbfd;
+            padding: 20px 25px;
+            border-radius: 6px;
             margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+        .summary-section p {
+            margin-bottom: 12px;
+        }
+        .summary-section p:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
 <body>
+
+<div class="container">
 
 <h1>Steve Kaminczak</h1>
 
@@ -49,11 +103,13 @@
 </div>
 
 <h2>Professional Summary</h2>
+<div class="summary-section">
 <p>With over 25 years in education spanning secondary and post-secondary instruction, curriculum development, and writing center administration, I bring a unique combination of classroom expertise and instructional design experience to curriculum development. My recent work implementing HISD's New Education System (NES) at Westbury HS demonstrated my ability to translate educational frameworks into actionable, teacher-facing materials that drive measurable student outcomes. As part of a collaborative team, I contributed to campus transformation from D to B rating through rigorous, TEKS-aligned curriculum implementation and data-driven instructional adjustments.</p>
 
 <p>My extensive background in writing center administration and tutor training has refined my approach to creating clear, accessible instructional materials for diverse audiences. I understand how to scaffold complex content, provide implementation guidance, and design differentiated assignments that meet varied learner needs. My experience with educational technology tools (Articulate, Captivate, H5P, iSpring) combined with my deep understanding of the NES model's LSAE differentiation framework positions me to develop comprehensive curriculum resources including slide decks, student activities, DOLs, and teacher guidance materials. As a member of HISD's inaugural AI Cohort, I bring additional expertise in integrating AI tools into curriculum design while maintaining FERPA compliance and data privacy standards.</p>
 
 <p>Currently teaching nine different course preparations at Middle College - HCC Gulfton Campus, I maintain daily practice in curriculum adaptation, assessment design, and responsive instruction for Title I, ESL-majority populations. My hands-on experience with Canvas LMS, PowerSchool, OnTrack assessment platform, and current HISD English district curriculum ensures my curriculum development work remains grounded in the realities of diverse urban classrooms and responsive to the needs of both teachers and students in HISD's NES schools.</p>
+</div>
 
 <h2>Education</h2>
 <ul>
@@ -191,6 +247,8 @@
     <li>National Council of Teachers of English</li>
     <li>Sigma Tau Delta</li>
 </ul>
+
+</div>
 
 </body>
 </html>
