@@ -2,253 +2,233 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steve Kaminczak - CV</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
             line-height: 1.6;
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
-            color: #2c3e50;
-            background-color: #f8f9fa;
+            padding: 30px 20px;
+            background-color: #f5f7fa;
+            color: #333;
         }
-        .container {
-            background-color: white;
-            padding: 40px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        .page {
+            background: #fff;
+            padding: 30px 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             border-radius: 8px;
         }
-        h1 {
-            color: #1a5490;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
             margin-bottom: 20px;
-            font-size: 2.5em;
-            font-weight: 600;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin: 0;
+        }
+        .tagline {
+            font-size: 0.95em;
+            color: #555;
+            margin-top: 4px;
+        }
+        .contact-info {
+            text-align: right;
+            font-size: 0.9em;
+            color: #555;
         }
         h2 {
             color: #2980b9;
-            margin-top: 35px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-            font-size: 1.5em;
-            font-weight: 600;
-        }
-        h2:first-of-type {
-            border-top: none;
-            margin-top: 20px;
+            margin-top: 24px;
+            border-bottom: 1px solid #e1e8ed;
+            padding-bottom: 4px;
+            font-size: 1.1em;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
         }
         h3 {
             color: #34495e;
+            margin-bottom: 4px;
         }
         ul {
             list-style-type: none;
             padding-left: 0;
+            margin-top: 8px;
+            margin-bottom: 8px;
         }
         li {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
+            margin-bottom: 6px;
         }
-        li:before {
-            content: "▸";
-            color: #3498db;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
+        p {
+            margin-top: 6px;
+            margin-bottom: 6px;
         }
-        li strong {
-            color: #1a5490;
-            font-size: 1.05em;
+        a {
+            color: #2980b9;
+            text-decoration: none;
         }
-        .contact-info {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #f0f7fb;
-            border-left: 4px solid #3498db;
-            border-radius: 4px;
-        }
-        .contact-info p {
-            margin: 0;
-            line-height: 1.8;
-        }
-        .summary-section {
-            background-color: #f8fbfd;
-            padding: 20px 25px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            border-left: 4px solid #3498db;
-        }
-        .summary-section p {
-            margin-bottom: 12px;
-        }
-        .summary-section p:last-child {
-            margin-bottom: 0;
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+<div class="page">
 
-<div class="container">
+    <div class="header">
+        <div>
+            <h1>Steve Kaminczak</h1>
+            <div class="tagline">ELA Educator & Instructional Technologist</div>
+        </div>
+        <div class="contact-info">
+            <p>
+                5740 San Felipe St. #627<br>
+                Houston, TX 77057<br>
+                <a href="tel:19794365969">(979) 436-5969</a><br>
+                <a href="mailto:kaminczak@gmail.com">kaminczak@gmail.com</a>
+            </p>
+        </div>
+    </div>
 
-<h1>Steve Kaminczak</h1>
+    <h2>Professional Summary</h2>
+    <p>
+        ELA educator and instructional technologist with over 25 years of experience across secondary and 
+        post-secondary settings, including more than a decade in large urban districts serving Title I 
+        and ESL-majority populations. My work integrates curriculum design, instructional technology, 
+        and clear, assessment-aligned materials that support diverse learners.
+    </p>
+    <p>
+        I design TEKS-aligned lessons, Demonstrations of Learning (DOLs), differentiated tasks, 
+        and scaffolded reading/writing materials, while contributing to campus-wide efforts to 
+        improve student outcomes. My instructional technology background includes LMS development, 
+        online learning design, SCORM content, and work on CLEO, Texas A&M’s open-source synchronous 
+        and asynchronous tutoring platform. I stay current with emerging AI tools—including LLMs, 
+        retrieval-augmented generation (RAG), local models, and agentic workflows—and understand the 
+        importance of using these responsibly within FERPA-aligned educational environments.
+    </p>
 
-<div class="contact-info">
-    <p>5740 San Felipe St. #627<br>
-    Houston, TX 77057<br>
-    (979) 436-5969<br>
-    kaminczak@gmail.com</p>
-</div>
+    <h2>Curriculum Design & NES Implementation</h2>
+    <ul>
+        <li>Design and implement TEKS-aligned ELA lessons for grades 9–11 on NES and non-NES campuses, including slide decks, DOLs, scaffolded reading/writing tasks, and differentiated materials.</li>
+        <li>Adapt HISD NES curriculum to Title I and ESL-majority classrooms using Multiple Response Strategies (MRS), LSAE differentiation, and culturally responsive pedagogy.</li>
+        <li>Create student-facing tasks that support complex texts, analytical writing, and incremental skill development aligned with campus and district assessments.</li>
+        <li>Collaborate within PLC “brain trust” structures to refine curriculum for rigor, clarity, pacing, and alignment with NES expectations and district English 6–12 curriculum.</li>
+        <li>Integrate instructional platforms (Canvas LMS, PowerSchool, OnTrack, SCORM content, digital writing tools) to support accessibility, readability, and teacher usability.</li>
+    </ul>
 
-<h2>Professional Summary</h2>
-<div class="summary-section">
-<p>With over 25 years in education spanning secondary and post-secondary instruction, curriculum development, and writing center administration, I bring a unique combination of classroom expertise and instructional design experience to curriculum development. My recent work implementing HISD's New Education System (NES) at Westbury HS demonstrated my ability to translate educational frameworks into actionable, teacher-facing materials that drive measurable student outcomes. As part of a collaborative team, I contributed to campus transformation from D to B rating through rigorous, TEKS-aligned curriculum implementation and data-driven instructional adjustments.</p>
+    <h2>Education</h2>
+    <ul>
+        <li><strong>Sam Houston State University</strong><br>
+            Master of Arts, English, 2004</li>
+        <li><strong>Sam Houston State University</strong><br>
+            Bachelor of Arts, English, 2001</li>
+    </ul>
 
-<p>My extensive background in writing center administration and tutor training has refined my approach to creating clear, accessible instructional materials for diverse audiences. I understand how to scaffold complex content, provide implementation guidance, and design differentiated assignments that meet varied learner needs. My experience with educational technology tools (Articulate, Captivate, H5P, iSpring) combined with my deep understanding of the NES model's LSAE differentiation framework positions me to develop comprehensive curriculum resources including slide decks, student activities, DOLs, and teacher guidance materials. As a member of HISD's inaugural AI Cohort, I bring additional expertise in integrating AI tools into curriculum design while maintaining FERPA compliance and data privacy standards.</p>
+    <h2>Administrative Positions</h2>
+    <ul>
+        <li><strong>Lone Star College–CyFair Teaching and Learning Center</strong><br>
+            Program Manager III, 2013–2015</li>
+        <li><strong>Texas A&amp;M University Writing Center</strong><br>
+            Assistant Director, 2007–2012<br>
+            - Served on the development committee for CLEO, TAMU’s open-source synchronous and asynchronous tutoring platform, contributing to workflow design, pedagogical alignment, and usability.</li>
+        <li><strong>Sam Houston State Writing Center</strong><br>
+            Assistant Director, 2005–2007</li>
+    </ul>
 
-<p>Currently teaching nine different course preparations at Middle College - HCC Gulfton Campus, I maintain daily practice in curriculum adaptation, assessment design, and responsive instruction for Title I, ESL-majority populations. My hands-on experience with Canvas LMS, PowerSchool, OnTrack assessment platform, and current HISD English district curriculum ensures my curriculum development work remains grounded in the realities of diverse urban classrooms and responsive to the needs of both teachers and students in HISD's NES schools.</p>
-</div>
+    <h2>Teaching Experience – Secondary</h2>
+    <ul>
+        <li><strong>Middle College – HCC Gulfton Campus (HISD)</strong><br>
+            ELAR Instructor, October 2024–Present<br>
+            - Teach English I–IV in an early-college model, supporting both high school and college-ready literacy expectations.<br>
+            - Design curriculum that aligns with dual systems (HISD + HCC) with emphasis on writing, reading comprehension, and STAAR/EOC preparation.<br>
+            - Use instructional technology platforms to support student accessibility and writing development.</li>
 
-<h2>Education</h2>
-<ul>
-    <li><strong>Sam Houston State University</strong><br>
-    Master of Arts, English, August 2004</li>
-    <li><strong>Sam Houston State University</strong><br>
-    Bachelor of Arts, English, May 2001</li>
-</ul>
+        <li><strong>Westbury HS (NES Campus)</strong><br>
+            ELAR Instructor, 2020–2024<br>
+            - Designed TEKS- and NES-aligned lessons with slide decks, DOLs, scaffolded tasks, and differentiated reading/writing materials.<br>
+            - Collaborated in PLC “brain trust” structures to strengthen clarity, pacing, and rigor of lesson plans.<br>
+            - Used LSAE differentiation and MRS strategies to support ESL and historically underserved students.<br>
+            - Contributed to campus improvement efforts that raised accountability ratings from D to B.<br>
+            - T-TESS Rating: Proficient</li>
 
-<h2>Administrative Positions</h2>
-<ul>
-    <li><strong>Lone Star College-CyFair Teaching and Learning Center</strong><br>
-    Program Manager III, 2013-2015</li>
-    <li><strong>Texas A&M University Writing Center</strong><br>
-    Assistant Director, 2007-2012</li>
-    <li><strong>Sam Houston State Writing Center</strong><br>
-    Assistant Director, 2005-2007</li>
-</ul>
+        <li><strong>Houston Can Academy – Southwest Campus</strong><br>
+            ELA Instructor, 2015–2020<br>
+            - Served on the Campus Instructional Leadership Team (CILT) to refine curriculum using assessment data.<br>
+            - Helped raise English I & II STAAR/EOC pass rates from 20% to 80% through targeted writing and reading curriculum.<br>
+            - Designed differentiated tasks for over-age, under-credited, and returning-to-school populations.</li>
+    </ul>
 
-<h2>Teaching Experience - Secondary</h2>
-<ul>
-    <li><strong>Middle College - HCC Gulfton Campus (HISD)</strong><br>
-    ELAR Instructor, October 2024-Present<br>
-    - Currently teaching English I, English II, English III, English IV, Reading I, Reading II, Creative Writing, Texas College Bridge, and Grad Lab.</li>
-    <li><strong>Westbury HS (NES Campus)</strong><br>
-    ELAR Instructor, 2020-2024<br>
-    - Implemented HISD's New Education System (NES) instructional model, utilizing LSAE differentiation to provide targeted support for diverse learners.<br>
-    - Developed and delivered grade-level rigorous instruction aligned to TEKS and NES curriculum framework, incorporating daily Demonstrations of Learning (DOLs) and Multiple Response Strategies (MRS).<br>
-    - Contributed to campus improvement efforts that elevated Westbury from D to B campus rating through data-driven instruction and collaborative Professional Learning Community (PLC) participation.<br>
-    - Taught Reading III, Literary Genres, and AP English III, consistently applying NES principles of personalized learning and deeper-learning cultivation.<br>
-    - T-TESS Rating: Proficient</li>
-    <li><strong>Houston Can Academy</strong><br>
-    ELA Instructor, 2015-2020<br>
-    - Served on Campus Instructional Leadership Team (CILT) to improve campus climate and accountability through data analysis and instructional coaching.<br>
-    - Collaborated with a team of three to successfully elevate the Hobby and Southwest campuses from TEA probationary status to full compliance, achieving dramatic improvement in English I and II EOC STAAR pass rates from 20% to 80%.<br>
-    - Designed and implemented differentiated curriculum and assessments for diverse student populations in Title I environment.</li>
-</ul>
+    <h2>Teaching Experience – Post-Secondary</h2>
+    <ul>
+        <li><strong>Lone Star College System (Cy-Fair)</strong><br>
+            English Department, 2001–2003, 2013–2015<br>
+            - Courses taught: Freshman Composition I<br>
+            - Focused on reading/writing support for first-generation and non-traditional students.</li>
 
-<h2>Teaching Experience - Post-Secondary</h2>
-<ul>
-    <li><strong>Lone Star College System (Cy Fair)</strong><br>
-    Department of English, 2001-2003, 2013-2015<br>
-    - Courses Taught: Freshman Composition I</li>
-    <li><strong>Texas A&M University</strong><br>
-    University Writing Center, 2007-2012<br>
-    - Taught one-credit tutor preparation course</li>
-    <li><strong>Sam Houston State University</strong><br>
-    English Language Institute, 2005-2007<br>
-    - Developed and taught course on TOEFL preparation<br>
-    - Created Talk Time, a weekly workshop where through conversation, ESL students and writing tutors were matched to acclimate international students to the university<br>
-    Department of English, 2002-2007<br>
-    - Courses Taught: Developmental Writing, Freshman Composition I, Madness in Fiction (special topics course), 2002-2007</li>
-</ul>
+        <li><strong>Texas A&amp;M University</strong><br>
+            University Writing Center, 2007–2012<br>
+            - Taught tutor-preparation course on writing pedagogy and feedback strategies.<br>
+            - Supported faculty integrating writing and assessment across disciplines.</li>
 
-<h2>Editing and Publishing Experience</h2>
-<ul>
-    <li><strong>The Writing Lab Newsletter</strong> - Reviewer, 2008-2009</li>
-    <li><strong>Texas Review Press</strong> - Assistant to the Editor, 1996-2006</li>
-    <li><strong>SHSU Writing Across the Curriculum Newsletter</strong> - Production Editor, 1999-2000</li>
-</ul>
+        <li><strong>Sam Houston State University</strong><br>
+            English Language Institute, 2005–2007<br>
+            - Developed and taught TOEFL preparation and conversational English curriculum.<br>
+            Department of English, 2002–2007<br>
+            - Courses taught: Developmental Writing, Freshman Composition I, “Madness in Fiction.”</li>
+    </ul>
 
-<h2>Conference Presentations</h2>
-<ul>
-    <li><strong>Texas Distance Learning Association</strong>, San Antonio, 2015<br>
-    <em>Providing Writing Assistance Online to All Students</em><br>
-    With Candace Schaefer, Valerie Balester, and Stephanie Leary</li>
-    <li><strong>Texas A&M Assessment Conference</strong>, College Station, 2011<br>
-    <em>Designing Assessment Methods for a W Course in Agricultural Systems Management: Successes and Failures</em><br>
-    With Steve Searcy, Clyde Munster, Candace Schaefer, and Valerie Balester</li>
-    <li><strong>Computers and Writing</strong>, Ann Arbor, 2011<br>
-    <em>Making Innovation Public: Resources for DIY, Modification, and Sharing of Writing Center Technologies</em><br>
-    With Matthew Gilchrist, Kim Abels, Dennis Bennett, Shareen Grogan, and Tammy Conard-Salvo</li>
-    <li><strong>Academic Peer Educator Conference</strong>, College Station, 2011<br>
-    <em>Pirates vs. Ninjas: Two Styles of Teaching</em><br>
-    With Allie Mitchell</li>
-    <li><strong>Teaching with Technology</strong>, College Station, 2011<br>
-    <em>Using TurnItIn to Teach Source Integration</em><br>
-    With Candace Schaefer</li>
-    <li><strong>International Writing Center Association</strong>, Baltimore, 2010<br>
-    <em>Navigating Technology and Innovation in Writing Centers</em><br>
-    With Matthew Gilchrist, Kim Abels, Tabetha Adkins, Dennis Bennett, Shareen Grogan, and Tammy Conard-Salvo</li>
-    <li><strong>South Central Writing Centers Association</strong>, Lake Charles, 2010<br>
-    <em>Through Mazes Running: The Hidden Soul of Harmony: Diversity within the TAMU Writing Center</em><br>
-    With Patricia Droz</li>
-    <li><strong>Teaching with Technology</strong>, College Station, 2010<br>
-    <em>Developing a Scheduling/Reporting Tool for Learning in the University Writing Center</em><br>
-    With Candace Schaefer and Stephanie Leary</li>
-    <li><strong>Academic Peer Educator Conference</strong>, College Station, 2009<br>
-    <em>Web 2.0: Tools for Peer Educators</em></li>
-    <li><strong>Conference on College Composition and Communication</strong>, New York, 2007<br>
-    <em>Teacher or Editor? Tutor Identity Negotiation in the Writing Center</em><br>
-    With Diane Dowdey and Frances Crawford Fennessy</li>
-    <li><strong>International Writing Center Association</strong>, Houston, 2007<br>
-    <em>Putting Plato and Aristotle to Work: Using Classical Rhetoric in Writing Centers</em><br>
-    With John Paul Ewing and David Sweeten</li>
-    <li><strong>South Central Writing Centers Association</strong>, Little Rock, 2006<br>
-    <em>Tutors to Teachers: How Methods Evolve</em><br>
-    With Barbara Jones, Deborah Greene, and Jon Nelson</li>
-    <li><strong>College English Association</strong>, San Antonio, 2006<br>
-    <em>Tutors to Teachers: How Methods Evolve</em><br>
-    With Barbara Jones and Deborah Greene</li>
-    <li><strong>College Academic Support Programs Conference</strong>, Houston, 2001<br>
-    <em>The Five W's and H: Recruiting, Selecting, and Training Consultants</em><br>
-    With Patricia Williams and Paulette Golden</li>
-</ul>
+    <h2>Editing and Publishing Experience</h2>
+    <ul>
+        <li><strong>The Writing Lab Newsletter</strong> – Reviewer, 2008–2009</li>
+        <li><strong>Texas Review Press</strong> – Assistant to the Editor, 1996–2006</li>
+        <li><strong>SHSU Writing Across the Curriculum Newsletter</strong> – Production Editor, 1999–2000</li>
+    </ul>
 
-<h2>Certifications and Training</h2>
-<ul>
-    <li><strong>HISD AI Cohort (Cohort 1)</strong>, <em>Completed May 2024</em><br>
-    - Completed district's inaugural AI professional development program focusing on AI development, functionalities, and ethical classroom implementation<br>
-    - Developed expertise in AI prompting, projects, agents, and LLMs within FERPA compliance guidelines<br>
-    - Learned to navigate district guidelines for AI use while enhancing teaching and learning and ensuring data privacy standards</li>
-    <li><strong>College Reading and Learning Association</strong>, <em>Master Level</em>, 2000</li>
-    <li><strong>Diversity Training Institute, Office of the Vice President & Assoc. Provost for Diversity</strong>, <em>Certified</em>, 2009</li>
-    <li><strong>Group Leadership Forum, Employee and Organizational Development at Texas A&M</strong>, <em>Completed</em>, 2009</li>
-    <li><strong>Adjunct Certification Program, Lone Star College - Cy Fair</strong>, <em>Certified</em>, 2014</li>
-    <li><strong>Texas ELA (K-12), Alternative Certification for Teachers</strong>, <em>Certified</em>, 2016</li>
-</ul>
+    <h2>Conference Presentations (Selected)</h2>
+    <ul>
+        <li><strong>Texas Distance Learning Association</strong>, 2015<br>
+            <em>Providing Writing Assistance Online to All Students</em></li>
+        <li><strong>Texas A&amp;M Assessment Conference</strong>, 2011<br>
+            <em>Designing Assessment Methods for a W Course</em></li>
+        <li><strong>Computers and Writing</strong>, 2011<br>
+            <em>Making Innovation Public in Writing Center Technologies</em></li>
+        <li><strong>International Writing Center Association</strong>, 2010<br>
+            <em>Navigating Technology and Innovation in Writing Centers</em></li>
+    </ul>
 
-<h2>Skills</h2>
-<ul>
-    <li><strong>Language:</strong> English (Native), Spanish (Reading: basic, Speaking: basic)</li>
-    <li><strong>Technical:</strong> H5P, Scorm, Markdown, LaTex, Microsoft Office Suite, Office 365, Google Workspace (Docs, Slides, Drive), AI prompting and implementation (LLMs, agents, projects)</li>
-    <li><strong>Educational Technology:</strong> Articulate Studio, Articulate Engage, Adobe Creative Suite, Adobe Captivate, Camtasia, Ispring Suite, Canva, Canvas LMS, PowerSchool, SCORM compliance</li>
-    <li><strong>HISD Systems:</strong> OnTrack assessment platform, HISD district curriculum (English 6-12), NES curriculum framework</li>
-    <li><strong>Curriculum Design:</strong> TEKS alignment, NES curriculum development, LSAE instructional model, differentiated instruction, assessment design (DOL), slide deck creation for teacher-facing materials, AI integration within FERPA guidelines</li>
-    <li><strong>Data Analysis:</strong> Student performance tracking, formative assessment analysis, PLC collaboration, instructional adjustment based on classroom response data</li>
-</ul>
+    <h2>Certifications and Training</h2>
+    <ul>
+        <li><strong>HISD AI Cohort (Cohort 1)</strong>, Completed 2024<br>
+            Training in AI literacy, prompt design basics, and FERPA-aligned educational usage.</li>
+        <li><strong>College Reading and Learning Association</strong>, Master Level, 2000</li>
+        <li><strong>Diversity Training Institute (TAMU)</strong>, Certified 2009</li>
+        <li><strong>Adjunct Certification Program (Lone Star College)</strong>, 2014</li>
+        <li><strong>Texas ELA (K–12) Teaching Certification</strong>, 2016</li>
+    </ul>
 
-<h2>Professional Societies</h2>
-<ul>
-    <li>Houston Federation of Teachers</li>
-    <li>College Reading and Learning Association</li>
-    <li>International Writing Center Association</li>
-    <li>National Council of Teachers of English</li>
-    <li>Sigma Tau Delta</li>
-</ul>
+    <h2>Skills</h2>
+    <ul>
+        <li><strong>Curriculum Design:</strong> TEKS alignment; NES lesson design; DOLs; scaffolding; differentiation; teacher-facing & student-facing materials.</li>
+        <li><strong>Assessment & Data Analysis:</strong> STAAR/EOC alignment; PLC data review; formative assessment design.</li>
+        <li><strong>Instructional Technology:</strong> Canvas LMS, PowerSchool, OnTrack, SCORM content, H5P, digital writing tools, accessibility-focused content design.</li>
+        <li><strong>AI & Emerging Tech:</strong> Experience with large language models (commercial & open-source), retrieval-augmented generation (RAG), local LLMs, MCP agents, prompt design, and FERPA-aligned usage in educational contexts.</li>
+        <li><strong>Language:</strong> English (Native); Spanish (Basic)</li>
+    </ul>
+
+    <h2>Professional Societies</h2>
+    <ul>
+        <li>Houston Federation of Teachers</li>
+        <li>National Council of Teachers of English</li>
+        <li>College Reading and Learning Association</li>
+        <li>International Writing Center Association</li>
+        <li>Sigma Tau Delta</li>
+    </ul>
 
 </div>
-
 </body>
 </html>
