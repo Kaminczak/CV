@@ -21,6 +21,7 @@
     --rule:       #d6dade;            /* hairline rules */
     --accent:     oklch(45% 0.04 220);/* muted slate-teal */
     --accent-2:   oklch(38% 0.05 220);/* darker variant for name */
+    --cta:        #b3261e;            /* deep crimson for call-to-action links */
     --paper:      #ffffff;
 
     --page-w: 8.5in;
@@ -64,9 +65,40 @@
       min-height: var(--page-h);
     }
     a { color: inherit; text-decoration: none; }
+    /* Keep CTA links red & visible when printed */
+    .cta-link { color: var(--cta) !important; border-color: var(--cta) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
 
   /* ---------- Header ---------- */
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .header-left { flex: 1 1 auto; min-width: 0; }
+  .header-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+    padding-top: 5px;
+  }
+  .cta-link {
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--cta);
+    text-decoration: none;
+    border: 1px solid var(--cta);
+    padding: 3px 9px;
+    border-radius: 2px;
+    white-space: nowrap;
+    line-height: 1.15;
+  }
+
   .name {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -217,16 +249,24 @@
 
   <!-- ===== HEADER ===== -->
   <header>
-    <h1 class="name">Steve Kaminczak</h1>
-    <p class="contact">
-      Houston, TX
-      <span class="sep">·</span>
-      (979) 436-5969
-      <span class="sep">·</span>
-      <a href="mailto:kaminczak@gmail.com">kaminczak@gmail.com</a>
-      <span class="sep">·</span>
-      sk.md
-    </p>
+    <div class="header-row">
+      <div class="header-left">
+        <h1 class="name">Steve Kaminczak</h1>
+        <p class="contact">
+          Houston, TX
+          <span class="sep">·</span>
+          (979) 436-5969
+          <span class="sep">·</span>
+          <a href="mailto:kaminczak@gmail.com">kaminczak@gmail.com</a>
+          <span class="sep">·</span>
+          sk.md
+        </p>
+      </div>
+      <div class="header-cta">
+        <a class="cta-link" href="https://www.dropbox.com/scl/fi/ql5e3d4xj5rl4pe1w1wdo/20260429_161736.mp4?rlkey=wx5rw03rwojho9d4xgbh7oass&amp;st=3alvhpzt&amp;dl=0">▸ Watch 1-Min Intro</a>
+        <a class="cta-link" href="https://kaminczak.github.io/tek-example/">▸ View TEKS Glossary</a>
+      </div>
+    </div>
     <hr class="header-rule" />
   </header>
 
