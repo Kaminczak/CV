@@ -1,296 +1,402 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Steve Kaminczak - CV</title> <style> body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; max-width: 900px; mar
-
-pasted
-
-can you revise this then so i can host my new cv ***
-
-
-3 steps
-
-Copy HTML CV to outputs for download
-
-
-
-Prepared revised CV and compiled download details.
-
-Download your revised index.html
-
-Changes made:
-
-Tagline: "ELA Educator" (dropped "& Instructional Technologist")
-Professional Summary: Rewritten to lead with your editorial/curriculum development background rather than just implementation. Now reads as someone who knows both sides—what teachers need and how to create quality materials.
-Fixed HTML entities: Properly escaped the ampersands that were missing (&amp; for & in places like "English I & II")
-Push that to your CV repo and sk.md will update automatically.
-
-Index
-Code · HTML 
-
-
-How can I help you today?
-
-
-
-
-
-
-
-
-Index · HTML
-Copy
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Steve Kaminczak - CV</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px 20px;
-            background-color: #f5f7fa;
-            color: #333;
-        }
-        .page {
-            background: #fff;
-            padding: 30px 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border-radius: 8px;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #2c3e50;
-            font-size: 2em;
-            margin: 0;
-        }
-        .tagline {
-            font-size: 0.95em;
-            color: #555;
-            margin-top: 4px;
-        }
-        .contact-info {
-            text-align: right;
-            font-size: 0.9em;
-            color: #555;
-        }
-        h2 {
-            color: #2980b9;
-            margin-top: 24px;
-            border-bottom: 1px solid #e1e8ed;
-            padding-bottom: 4px;
-            font-size: 1.1em;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-        }
-        h3 {
-            color: #34495e;
-            margin-bottom: 4px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 8px;
-            margin-bottom: 8px;
-        }
-        li {
-            margin-bottom: 6px;
-        }
-        p {
-            margin-top: 6px;
-            margin-bottom: 6px;
-        }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="utf-8" />
+<title>Steve Kaminczak — Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Page setup ---------- */
+  @page {
+    size: Letter;
+    margin: 0;
+  }
+
+  :root {
+    --ink:        #1b1f23;            /* near-black text */
+    --ink-soft:   #3a4149;            /* secondary text */
+    --muted:      #6b7079;            /* tertiary / dates */
+    --rule:       #d6dade;            /* hairline rules */
+    --accent:     oklch(45% 0.04 220);/* muted slate-teal */
+    --accent-2:   oklch(38% 0.05 220);/* darker variant for name */
+    --paper:      #ffffff;
+
+    --page-w: 8.5in;
+    --page-h: 11in;
+    --pad-x: 0.55in;
+    --pad-y: 0.3in;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #e9ecef;        /* gray around the "paper" on screen */
+    color: var(--ink);
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 9.25pt;
+    line-height: 1.28;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* On-screen: show the page as a "sheet" centered on a gray field */
+  .sheet {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    margin: 24px auto;
+    background: var(--paper);
+    padding: var(--pad-y) var(--pad-x);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 12px 32px rgba(0,0,0,0.10);
+    color: var(--ink);
+  }
+
+  /* Print: no shadow, no gray, fills the actual page */
+  @media print {
+    html, body { background: #fff; }
+    .sheet {
+      margin: 0;
+      box-shadow: none;
+      width: var(--page-w);
+      min-height: var(--page-h);
+    }
+    a { color: inherit; text-decoration: none; }
+  }
+
+  /* ---------- Header ---------- */
+  .name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 22pt;
+    letter-spacing: -0.01em;
+    color: var(--accent-2);
+    line-height: 1.05;
+    margin: 0 0 3px 0;
+  }
+
+  .contact {
+    font-size: 9.25pt;
+    color: var(--ink-soft);
+    letter-spacing: 0.01em;
+    margin: 0 0 8px 0;
+  }
+  .contact .sep {
+    color: var(--muted);
+    margin: 0 8px;
+  }
+  .contact a {
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+
+  .header-rule {
+    border: 0;
+    border-top: 1.25px solid var(--accent);
+    margin: 0 0 8px 0;
+  }
+
+  /* ---------- Sections ---------- */
+  section {
+    margin-bottom: 4px;
+  }
+
+  h2 {
+    font-size: 9.75pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 5px 0;
+    padding-bottom: 2px;
+    border-bottom: 0.6px solid var(--rule);
+  }
+
+  /* ---------- Summary paragraph ---------- */
+  .summary {
+    margin: 0;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+
+  /* ---------- Job/role entries ---------- */
+  .role {
+    margin: 3px 0 3px 0;
+  }
+  .role:last-child { margin-bottom: 0; }
+
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 1px;
+  }
+  .role-title {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 10pt;
+  }
+  .role-title .org {
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+  .role-dates {
+    font-size: 9pt;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  ul.bullets {
+    margin: 2px 0 0 0;
+    padding-left: 15px;
+  }
+  ul.bullets li {
+    margin: 0.5px 0;
+    color: var(--ink);
+  }
+  ul.bullets li::marker {
+    color: var(--muted);
+  }
+
+  /* ---------- Two-column compact rows (Education etc.) ---------- */
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin: 1px 0;
+  }
+  .row .label {
+    color: var(--ink);
+  }
+  .row .label strong {
+    font-weight: 600;
+  }
+  .row .meta {
+    color: var(--muted);
+    font-size: 9pt;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  /* ---------- Inline lists (skills, memberships) ---------- */
+  .inline-list {
+    color: var(--ink);
+    margin: 0;
+    text-wrap: pretty;
+  }
+  .inline-list .pipe {
+    color: var(--muted);
+    margin: 0 6px;
+  }
+
+  /* ---------- Subentry (the TEKS reference tool block) ---------- */
+  .subentry {
+    margin: 2px 0 3px 0;
+  }
+  .subentry-title {
+    font-weight: 600;
+    font-size: 10pt;
+    color: var(--ink);
+  }
+  .subentry-title .qual {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 9.25pt;
+  }
+</style>
 </head>
 <body>
-<div class="page">
 
-    <div class="header">
-        <div>
-            <h1>Steve Kaminczak</h1>
-            <div class="tagline">ELA Educator</div>
-        </div>
-        <div class="contact-info">
-            <p>
-                5740 San Felipe St. #627<br>
-                Houston, TX 77057<br>
-                <a href="tel:19794365969">(979) 436-5969</a><br>
-                <a href="mailto:kaminczak@gmail.com">kaminczak@gmail.com</a>
-            </p>
-        </div>
+<main class="sheet" role="document">
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1 class="name">Steve Kaminczak</h1>
+    <p class="contact">
+      Houston, TX
+      <span class="sep">·</span>
+      (979) 436-5969
+      <span class="sep">·</span>
+      <a href="mailto:kaminczak@gmail.com">kaminczak@gmail.com</a>
+      <span class="sep">·</span>
+      sk.md
+    </p>
+    <hr class="header-rule" />
+  </header>
+
+  <!-- ===== SUMMARY ===== -->
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary">
+      RLA content specialist with 10+ years creating and adapting English I and English II curriculum
+      for Texas public school classrooms. Proven track record raising EOC pass rates from 20% to 80%
+      through TEKS-aligned, data-driven instructional materials. Background in academic editing,
+      writing center pedagogy, and AI-enhanced content development. Currently building a comprehensive
+      TEKS reference tool for English I–IV that maps standards to student-facing language, question
+      stems, vertical alignment, and common misconceptions.
+    </p>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section>
+    <h2>Relevant Experience</h2>
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">ELAR Instructor <span class="org">— Middle College at HCC Gulfton (HISD)</span></div>
+        <div class="role-dates">2024 – Present</div>
+      </div>
+      <ul class="bullets">
+        <li>Developed TEKS-aligned warm-ups, lessons, and assessments for English I in an ESL-majority environment</li>
+        <li>Created scaffolded writing prompts and reading guides adapted for emergent bilingual learners</li>
+        <li>Integrated AI tools for content differentiation and formative assessment design</li>
+      </ul>
     </div>
 
-    <h2>Professional Summary</h2>
-    <p>
-        ELA educator with over 25 years of experience across secondary, post-secondary, and editorial 
-        settings. Over a decade in Title I and ESL-majority classrooms implementing NES-aligned 
-        curriculum—refining materials, adjusting scaffolds, and translating complex tasks into 
-        accessible instruction.
-    </p>
-    <p>
-        Background includes 10 years in academic publishing, development of tutor-training curriculum, 
-        and contributions to CLEO, Texas A&M's open-source tutoring platform. Planning involves 
-        internalizing district lessons (including LO/KO, DOLs, instructional notes, and provided 
-        slide decks) and adapting them for classroom needs—adjusting scaffolds and translating 
-        complex academic language into teachable steps without altering district objectives. 
-        Familiar with modern AI models, RAG workflows, and FERPA-aligned instructional applications.
-    </p>
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">ELAR Instructor <span class="org">— Westbury High School, NES Campus (HISD)</span></div>
+        <div class="role-dates">2020 – 2024</div>
+      </div>
+      <ul class="bullets">
+        <li>Designed and implemented English I and English II curriculum aligned to STAAR redesign standards</li>
+        <li>Contributed to campus accountability improvement from D to B rating; T-TESS rating: Proficient</li>
+        <li>Collaborated with department team on vertical alignment and content standardization across grade levels</li>
+      </ul>
+    </div>
 
-    <h2>Curriculum Implementation & Instructional Adaptation</h2>
-    <ul>
-        <li>Internalize district-provided NES-aligned curriculum by reviewing daily objectives, DOLs, 
-            pacing notes, embedded teacher guidance, and example videos to determine the most effective 
-            instructional approach for a given class period.</li>
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">ELA Instructor <span class="org">— Houston Can Academy–Southwest</span></div>
+        <div class="role-dates">2015 – 2020</div>
+      </div>
+      <ul class="bullets">
+        <li>Raised English I and English II EOC pass rates from 20% to 80% through targeted content development</li>
+        <li>Created differentiated materials for credit-recovery and over-age/under-credit students</li>
+        <li>Wrote assessment items, essay prompts, and warm-up sequences aligned to TEKS and STAAR blueprints</li>
+      </ul>
+    </div>
+  </section>
 
-        <li>Refine and adapt lesson materials by translating templated or AI-generated questions into clear, 
-            grade-appropriate instructional language while maintaining the original LO/KO and DOL 
-            requirements.</li>
+  <!-- ===== CURRICULUM & CONTENT DEVELOPMENT ===== -->
+  <section>
+    <h2>Curriculum &amp; Content Development</h2>
 
-        <li>Adjust tasks, scaffolds, and response frames to improve accessibility for ESL learners and 
-            struggling readers without altering district expectations or assessment alignment.</li>
+    <div class="subentry">
+      <div class="subentry-title">
+        TEKS Standards Reference Tool <span class="qual">— Independent Project</span>
+      </div>
+      <ul class="bullets">
+        <li>Building a comprehensive digital reference for English I–IV TEKS standards</li>
+        <li>Each entry includes: plain-language overview, student-facing translation (“Say it to a student”), 10+ question stems, vertical alignment (prior/current/next grade), and common misconceptions</li>
+        <li>Tagged by DOK level, Bloom’s taxonomy, cadence, and instructional strand; designed for content writers, instructional coaches, and classroom teachers</li>
+      </ul>
+    </div>
 
-        <li>Implement district slide decks and activity structures by selecting emphasis points, 
-            determining pacing, adding clarifying models, and preparing guided practice that maintains 
-            instructional fidelity while meeting student needs.</li>
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">Assistant Director <span class="org">— Texas A&amp;M University Writing Center</span></div>
+        <div class="role-dates">2007 – 2012</div>
+      </div>
+      <ul class="bullets">
+        <li>Developed tutor-training curriculum and pedagogy courses; contributed to CLEO, Texas A&amp;M’s open-source tutoring platform</li>
+        <li>Reviewed manuscripts for <em>The Writing Lab Newsletter</em> (2008–2009)</li>
+      </ul>
+    </div>
 
-        <li>Use Multiple Response Strategies (MRS), LSAE differentiation, and targeted questioning to support 
-            comprehension and engagement across diverse learning profiles.</li>
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">Assistant Director <span class="org">— Sam Houston State University Writing Center</span></div>
+        <div class="role-dates">2005 – 2007</div>
+      </div>
+      <ul class="bullets">
+        <li>Created training materials for writing tutors serving developmental through graduate-level students</li>
+      </ul>
+    </div>
+  </section>
 
-        <li>Integrate instructional technology—including Canvas LMS, PowerSchool, H5P, SCORM content, and 
-            digital literacy tools—to enhance student engagement and clarity of teacher-facing materials.</li>
-    </ul>
+  <!-- ===== EDITING & PUBLISHING ===== -->
+  <section>
+    <h2>Editing &amp; Publishing</h2>
+    <div class="row">
+      <div class="label"><strong>Texas Review Press</strong> — Assistant to Editor; manuscript editing, proofreading, and production for an academic literary press</div>
+      <div class="meta">1996 – 2006</div>
+    </div>
+    <div class="row">
+      <div class="label"><strong>SHSU WAC Newsletter</strong> — Production Editor</div>
+      <div class="meta">1999 – 2000</div>
+    </div>
+  </section>
 
+  <!-- ===== EDUCATION ===== -->
+  <section>
     <h2>Education</h2>
-    <ul>
-        <li><strong>Sam Houston State University</strong><br>
-            Master of Arts, English, 2004</li>
-        <li><strong>Sam Houston State University</strong><br>
-            Bachelor of Arts, English, 2001</li>
-    </ul>
+    <div class="row">
+      <div class="label"><strong>M.A., English</strong> — Sam Houston State University</div>
+      <div class="meta">2004</div>
+    </div>
+    <div class="row">
+      <div class="label"><strong>B.A., English</strong> — Sam Houston State University</div>
+      <div class="meta">2001</div>
+    </div>
+  </section>
 
-    <h2>Administrative Positions</h2>
-    <ul>
-        <li><strong>Lone Star College–CyFair Teaching and Learning Center</strong><br>
-            Program Manager III, 2013–2015</li>
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section>
+    <h2>Certifications &amp; Professional Development</h2>
+    <div class="row">
+      <div class="label">Texas ELA Certification, Grades 7–12</div>
+      <div class="meta">2016</div>
+    </div>
+    <div class="row">
+      <div class="label">HISD AI Cohort — AI/LLM applications in K–12 instruction</div>
+      <div class="meta">2024</div>
+    </div>
+    <div class="row">
+      <div class="label">College Reading &amp; Learning Association, Master Level</div>
+      <div class="meta">2000</div>
+    </div>
+    <div class="row">
+      <div class="label">Diversity Training Institute Certified</div>
+      <div class="meta">2009</div>
+    </div>
+  </section>
 
-        <li><strong>Texas A&amp;M University Writing Center</strong><br>
-            Assistant Director, 2007–2012<br>
-            - Served on the development committee for CLEO, Texas A&M's open-source synchronous and 
-            asynchronous tutoring platform, contributing to workflow design, pedagogical alignment, 
-            and usability.</li>
+  <!-- ===== TECHNICAL SKILLS ===== -->
+  <section>
+    <h2>Technical Skills</h2>
+    <p class="inline-list">
+      STAAR/EOC data analysis<span class="pipe">|</span>
+      TEKS curriculum alignment<span class="pipe">|</span>
+      H5P interactive content<span class="pipe">|</span>
+      SCORM authoring<span class="pipe">|</span>
+      Canvas LMS<span class="pipe">|</span>
+      PowerSchool<span class="pipe">|</span>
+      AI/LLM prompt design<span class="pipe">|</span>
+      RAG workflows<span class="pipe">|</span>
+      FERPA-compliant edtech
+    </p>
+  </section>
 
-        <li><strong>Sam Houston State University Writing Center</strong><br>
-            Assistant Director, 2005–2007</li>
-    </ul>
+  <!-- ===== MEMBERSHIPS ===== -->
+  <section>
+    <h2>Professional Memberships</h2>
+    <p class="inline-list">
+      National Council of Teachers of English<span class="pipe">|</span>
+      International Writing Center Association<span class="pipe">|</span>
+      College Reading &amp; Learning Association<span class="pipe">|</span>
+      Houston Federation of Teachers<span class="pipe">|</span>
+      Sigma Tau Delta
+    </p>
+  </section>
 
-    <h2>Teaching Experience – Secondary</h2>
-    <ul>
-        <li><strong>Middle College – HCC Gulfton Campus (HISD)</strong><br>
-            ELAR Instructor, 2024–Present<br>
-            - Teach English I–IV in an early-college environment, aligning coursework with both 
-              high school and college readiness standards.<br>
-            - Implement district-provided curriculum with added scaffolds and adjusted pacing to 
-              support a diverse student population.<br>
-            - Use instructional technology to improve writing clarity, reading support, and 
-              accessibility.</li>
+</main>
 
-        <li><strong>Westbury High School (NES Campus)</strong><br>
-            ELAR Instructor, 2020–2024<br>
-            - Implemented NES-aligned lessons by reviewing teacher notes, pacing guidance, model videos, 
-              and task explanations to design daily instruction.<br>
-            - Translated templated questions and tasks into clear instructional steps while preserving 
-              district objectives and assessments.<br>
-            - Applied LSAE differentiation and MRS strategies to support multilingual learners and 
-              students requiring additional scaffolds.<br>
-            - Contributed to campus accountability improvement from D to B through consistent, data-informed 
-              instructional implementation.<br>
-            - T-TESS Rating: Proficient</li>
-
-        <li><strong>Houston Can Academy – Southwest Campus</strong><br>
-            ELA Instructor, 2015–2020<br>
-            - Served on CILT to adapt curriculum in response to campus data trends.<br>
-            - Increased English I &amp; II EOC pass rates from 20% to 80% through targeted reading/writing 
-              scaffolds and differentiated instruction.<br>
-            - Adjusted district tasks to accommodate the needs of over-age and under-credited students.</li>
-    </ul>
-
-    <h2>Teaching Experience – Post-Secondary</h2>
-    <ul>
-        <li><strong>Lone Star College System (Cy-Fair)</strong><br>
-            English Department, 2001–2003, 2013–2015<br>
-            - Courses: Freshman Composition I<br>
-            - Focused on academic writing and literacy support for first-generation and non-traditional students.</li>
-
-        <li><strong>Texas A&amp;M University</strong><br>
-            University Writing Center, 2007–2012<br>
-            - Taught tutor-preparation course in writing pedagogy and feedback strategies.<br>
-            - Supported integration of writing across the curriculum.</li>
-
-        <li><strong>Sam Houston State University</strong><br>
-            English Language Institute, 2005–2007<br>
-            - Developed TOEFL and conversational English curriculum.<br>
-            Department of English, 2002–2007<br>
-            - Courses: Developmental Writing, Freshman Composition I, "Madness in Fiction."</li>
-    </ul>
-
-    <h2>Editing and Publishing Experience</h2>
-    <ul>
-        <li><strong>The Writing Lab Newsletter</strong> – Reviewer, 2008–2009</li>
-        <li><strong>Texas Review Press</strong> – Assistant to the Editor, 1996–2006</li>
-        <li><strong>SHSU Writing Across the Curriculum Newsletter</strong> – Production Editor, 1999–2000</li>
-    </ul>
-
-    <h2>Conference Presentations (Selected)</h2>
-    <ul>
-        <li><strong>Texas Distance Learning Association</strong>, 2015 — <em>Providing Writing Assistance Online</em></li>
-        <li><strong>Texas A&amp;M Assessment Conference</strong>, 2011 — <em>Designing Assessment in W Courses</em></li>
-        <li><strong>Computers and Writing</strong>, 2011 — <em>Innovation in Writing Center Technologies</em></li>
-        <li><strong>International Writing Center Association</strong>, 2010 — <em>Navigating Technology in Writing Centers</em></li>
-    </ul>
-
-    <h2>Certifications and Training</h2>
-    <ul>
-        <li><strong>HISD AI Cohort (Cohort 1)</strong>, Completed 2024 — Training in AI literacy, prompt design, and FERPA-aligned use.</li>
-        <li><strong>College Reading and Learning Association</strong>, Master Level, 2000</li>
-        <li><strong>Diversity Training Institute (TAMU)</strong>, Certified 2009</li>
-        <li><strong>Adjunct Certification Program (Lone Star College)</strong>, 2014</li>
-        <li><strong>Texas ELA (K–12) Teaching Certification</strong>, 2016</li>
-    </ul>
-
-    <h2>Skills</h2>
-    <ul>
-        <li><strong>Curriculum Implementation:</strong> Lesson internalization; LO/KO alignment; district fidelity; scaffold adjustments; instructional translation of complex or AI-generated tasks; model creation.</li>
-        <li><strong>Assessment &amp; Data Analysis:</strong> STAAR/EOC alignment; formative assessment; PLC collaboration; targeted intervention planning.</li>
-        <li><strong>Instructional Technology:</strong> Canvas LMS, PowerSchool, OnTrack, H5P, SCORM authoring, digital writing tools, student accessibility supports.</li>
-        <li><strong>AI &amp; Emerging Tech:</strong> Experience with large language models, retrieval-augmented generation (RAG), local LLMs, MCP agents, prompt design, and FERPA-aware educational use cases.</li>
-        <li><strong>Language:</strong> English (Native), Spanish (Basic)</li>
-    </ul>
-
-    <h2>Professional Societies</h2>
-    <ul>
-        <li>Houston Federation of Teachers</li>
-        <li>National Council of Teachers of English</li>
-        <li>College Reading and Learning Association</li>
-        <li>International Writing Center Association</li>
-        <li>Sigma Tau Delta</li>
-    </ul>
-
-</div>
 </body>
 </html>
-
