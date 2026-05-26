@@ -13,7 +13,7 @@
     size: Letter;
     margin: 0;
   }
-
+ 
   :root {
     --ink:        #1b1f23;            /* near-black text */
     --ink-soft:   #3a4149;            /* secondary text */
@@ -23,15 +23,15 @@
     --accent-2:   oklch(38% 0.05 220);/* darker variant for name */
     --cta:        #b3261e;            /* deep crimson for call-to-action links */
     --paper:      #ffffff;
-
+ 
     --page-w: 8.5in;
     --page-h: 11in;
     --pad-x: 0.55in;
     --pad-y: 0.3in;
   }
-
+ 
   * { box-sizing: border-box; }
-
+ 
   html, body {
     margin: 0;
     padding: 0;
@@ -43,7 +43,7 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-
+ 
   /* On-screen: show the page as a "sheet" centered on a gray field */
   .sheet {
     width: var(--page-w);
@@ -54,7 +54,7 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 12px 32px rgba(0,0,0,0.10);
     color: var(--ink);
   }
-
+ 
   /* Print: no shadow, no gray, fills the actual page */
   @media print {
     html, body { background: #fff; }
@@ -68,7 +68,7 @@
     /* Keep CTA links red & visible when printed */
     .cta-link { color: var(--cta) !important; border-color: var(--cta) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
-
+ 
   /* ---------- Header ---------- */
   .header-row {
     display: flex;
@@ -98,7 +98,7 @@
     white-space: nowrap;
     line-height: 1.15;
   }
-
+ 
   .name {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -108,7 +108,7 @@
     line-height: 1.05;
     margin: 0 0 3px 0;
   }
-
+ 
   .contact {
     font-size: 9.25pt;
     color: var(--ink-soft);
@@ -123,18 +123,18 @@
     color: var(--ink-soft);
     text-decoration: none;
   }
-
+ 
   .header-rule {
     border: 0;
     border-top: 1.25px solid var(--accent);
     margin: 0 0 8px 0;
   }
-
+ 
   /* ---------- Sections ---------- */
   section {
     margin-bottom: 4px;
   }
-
+ 
   h2 {
     font-size: 9.75pt;
     font-weight: 700;
@@ -145,20 +145,20 @@
     padding-bottom: 2px;
     border-bottom: 0.6px solid var(--rule);
   }
-
+ 
   /* ---------- Summary paragraph ---------- */
   .summary {
     margin: 0;
     color: var(--ink);
     text-wrap: pretty;
   }
-
+ 
   /* ---------- Job/role entries ---------- */
   .role {
     margin: 3px 0 3px 0;
   }
   .role:last-child { margin-bottom: 0; }
-
+ 
   .role-head {
     display: flex;
     justify-content: space-between;
@@ -182,7 +182,7 @@
     white-space: nowrap;
     font-weight: 500;
   }
-
+ 
   ul.bullets {
     margin: 2px 0 0 0;
     padding-left: 15px;
@@ -194,7 +194,7 @@
   ul.bullets li::marker {
     color: var(--muted);
   }
-
+ 
   /* ---------- Two-column compact rows (Education etc.) ---------- */
   .row {
     display: flex;
@@ -215,7 +215,7 @@
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
-
+ 
   /* ---------- Inline lists (skills, memberships) ---------- */
   .inline-list {
     color: var(--ink);
@@ -226,7 +226,7 @@
     color: var(--muted);
     margin: 0 6px;
   }
-
+ 
   /* ---------- Subentry (the TEKS reference tool block) ---------- */
   .subentry {
     margin: 2px 0 3px 0;
@@ -244,9 +244,9 @@
 </style>
 </head>
 <body>
-
+ 
 <main class="sheet" role="document">
-
+ 
   <!-- ===== HEADER ===== -->
   <header>
     <div class="header-row">
@@ -265,24 +265,25 @@
     </div>
     <hr class="header-rule" />
   </header>
-
+ 
   <!-- ===== SUMMARY ===== -->
   <section>
     <h2>Professional Summary</h2>
     <p class="summary">
-      RLA content specialist with 10+ years creating and adapting English I and English II curriculum
-      for Texas public school classrooms. Proven track record raising EOC pass rates from 20% to 80%
-      through TEKS-aligned, data-driven instructional materials. Background in academic editing,
-      writing center pedagogy, and AI-enhanced content development. Currently building a comprehensive
-      TEKS reference tool for English I–IV that maps standards to student-facing language, question
-      stems, vertical alignment, and common misconceptions.
+      25-year ELA teacher and writing center administrator with Texas K-12 ELA certification and a
+      CRLA Master-level tutor cert (cross-age literacy). Contributed to a team that drove English I/II
+      EOC pass rates significantly upward at a Title-I charter, and earned T-TESS Proficient at a NES
+      campus. Decade of Writing Center administration at Texas A&amp;M and Sam Houston State, with
+      tutor-prep pedagogy course design and contributions to CLEO, an open-source tutoring platform.
+      Currently building a comprehensive TEKS reference tool for English I–IV that maps standards to
+      student-facing language, question stems, vertical alignment, and common misconceptions.
     </p>
   </section>
-
+ 
   <!-- ===== EXPERIENCE ===== -->
   <section>
     <h2>Relevant Experience</h2>
-
+ 
     <div class="role">
       <div class="role-head">
         <div class="role-title">ELAR Instructor <span class="org">— Middle College at HCC Gulfton (HISD)</span></div>
@@ -294,36 +295,48 @@
         <li>Integrated AI tools for content differentiation and formative assessment design</li>
       </ul>
     </div>
-
+ 
     <div class="role">
       <div class="role-head">
-        <div class="role-title">ELAR Instructor <span class="org">— Westbury High School, NES Campus (HISD)</span></div>
-        <div class="role-dates">2020 – 2024</div>
+        <div class="role-title">ELA Instructor <span class="org">— Westbury High School, NES Campus (HISD)</span></div>
+        <div class="role-dates">2019 – 2024</div>
       </div>
       <ul class="bullets">
         <li>Designed and implemented English I and English II curriculum aligned to STAAR redesign standards</li>
-        <li>Contributed to campus accountability improvement from D to B rating; T-TESS rating: Proficient</li>
+        <li>Earned T-TESS Proficient rating during tenure</li>
         <li>Collaborated with department team on vertical alignment and content standardization across grade levels</li>
       </ul>
     </div>
-
+ 
     <div class="role">
       <div class="role-head">
         <div class="role-title">ELA Instructor <span class="org">— Houston Can Academy–Southwest</span></div>
-        <div class="role-dates">2015 – 2020</div>
+        <div class="role-dates">2015 – 2019</div>
       </div>
       <ul class="bullets">
-        <li>Raised English I and English II EOC pass rates from 20% to 80% through targeted content development</li>
+        <li>Contributed to a team effort that produced substantial gains in English I and English II EOC pass rates through targeted content development</li>
         <li>Created differentiated materials for credit-recovery and over-age/under-credit students</li>
         <li>Wrote assessment items, essay prompts, and warm-up sequences aligned to TEKS and STAAR blueprints</li>
       </ul>
     </div>
+ 
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">Program Manager III + Adjunct <span class="org">— Lone Star College – CyFair</span></div>
+        <div class="role-dates">2013 – 2015</div>
+      </div>
+      <ul class="bullets">
+        <li>Designed and ran adjunct faculty onboarding for the Lone Star College system (~7,000 faculty), coordinating a two-week multi-department training sequence</li>
+        <li>Administered campus-level TurnItIn and Lynda.com — pushed course assignments, tracked faculty completion data, and reported on platform usage</li>
+        <li>Taught Freshman Composition I as hybrid adjunct — live + asynchronous developmental writing</li>
+      </ul>
+    </div>
   </section>
-
+ 
   <!-- ===== CURRICULUM & CONTENT DEVELOPMENT ===== -->
   <section>
     <h2>Curriculum &amp; Content Development</h2>
-
+ 
     <div class="subentry">
       <div class="subentry-title">
         TEKS Standards Reference Tool <span class="qual">— Independent Project</span>
@@ -334,29 +347,41 @@
         <li>Tagged by DOK level, Bloom’s taxonomy, cadence, and instructional strand; designed for content writers, instructional coaches, and classroom teachers</li>
       </ul>
     </div>
-
+ 
+    <div class="subentry">
+      <div class="subentry-title">
+        Kaizen Vault <span class="qual">— Production AI Workflow</span>
+      </div>
+      <ul class="bullets">
+        <li>Claude Code + MCP (Obsidian, filesystem, Gmail, Calendar) running a 19k+ document archive with searchable retrieval</li>
+        <li>Daily AI-assisted instructional content workflow</li>
+      </ul>
+    </div>
+ 
     <div class="role">
       <div class="role-head">
         <div class="role-title">Assistant Director <span class="org">— Texas A&amp;M University Writing Center</span></div>
         <div class="role-dates">2007 – 2012</div>
       </div>
       <ul class="bullets">
-        <li>Developed tutor-training curriculum and pedagogy courses; contributed to CLEO, Texas A&amp;M’s open-source tutoring platform</li>
+        <li>Built tutor-prep pedagogy course for new adult tutors across live + asynchronous + observation-based modes; credit-bearing course ran 5+ years</li>
+        <li>Served on CLEO platform development committee — open-source tutoring platform; translated tutor workflows into feature specifications with engineering</li>
         <li>Reviewed manuscripts for <em>The Writing Lab Newsletter</em> (2008–2009)</li>
       </ul>
     </div>
-
+ 
     <div class="role">
       <div class="role-head">
         <div class="role-title">Assistant Director <span class="org">— Sam Houston State University Writing Center</span></div>
         <div class="role-dates">2005 – 2007</div>
       </div>
       <ul class="bullets">
+        <li>Built tutor onboarding cycle: observation, calibration, end-of-semester portfolio review</li>
         <li>Created training materials for writing tutors serving developmental through graduate-level students</li>
       </ul>
     </div>
   </section>
-
+ 
   <!-- ===== EDITING & PUBLISHING ===== -->
   <section>
     <h2>Editing &amp; Publishing</h2>
@@ -369,7 +394,7 @@
       <div class="meta">1999 – 2000</div>
     </div>
   </section>
-
+ 
   <!-- ===== EDUCATION ===== -->
   <section>
     <h2>Education</h2>
@@ -382,44 +407,50 @@
       <div class="meta">2001</div>
     </div>
   </section>
-
+ 
   <!-- ===== CERTIFICATIONS ===== -->
   <section>
     <h2>Certifications &amp; Professional Development</h2>
-    <div class="row">
-      <div class="label">Texas ELA Certification, Grades 7–12</div>
-      <div class="meta">2016</div>
-    </div>
     <div class="row">
       <div class="label">HISD AI Cohort — AI/LLM applications in K–12 instruction</div>
       <div class="meta">2024</div>
     </div>
     <div class="row">
-      <div class="label">College Reading &amp; Learning Association, Master Level</div>
-      <div class="meta">2000</div>
+      <div class="label">Texas ELA Certification, Grades 7–12</div>
+      <div class="meta">2016</div>
     </div>
     <div class="row">
-      <div class="label">Diversity Training Institute Certified</div>
+      <div class="label">Adjunct Certification Program — Lone Star College</div>
+      <div class="meta">2015</div>
+    </div>
+    <div class="row">
+      <div class="label">Texas A&amp;M Diversity Training Institute Certified</div>
       <div class="meta">2009</div>
     </div>
+    <div class="row">
+      <div class="label">College Reading &amp; Learning Association, Master Level (cross-age literacy)</div>
+      <div class="meta">2000</div>
+    </div>
   </section>
-
+ 
   <!-- ===== TECHNICAL SKILLS ===== -->
   <section>
     <h2>Technical Skills</h2>
     <p class="inline-list">
+      Claude Code + MCP servers<span class="pipe">|</span>
+      RAG workflows<span class="pipe">|</span>
+      AI/LLM prompt design<span class="pipe">|</span>
+      FERPA-aware AI workflow design<span class="pipe">|</span>
       STAAR/EOC data analysis<span class="pipe">|</span>
       TEKS curriculum alignment<span class="pipe">|</span>
-      H5P interactive content<span class="pipe">|</span>
-      SCORM authoring<span class="pipe">|</span>
       Canvas LMS<span class="pipe">|</span>
       PowerSchool<span class="pipe">|</span>
-      AI/LLM prompt design<span class="pipe">|</span>
-      RAG workflows<span class="pipe">|</span>
-      FERPA-compliant edtech
+      Google Classroom<span class="pipe">|</span>
+      H5P interactive content<span class="pipe">|</span>
+      SCORM authoring
     </p>
   </section>
-
+ 
   <!-- ===== MEMBERSHIPS ===== -->
   <section>
     <h2>Professional Memberships</h2>
@@ -431,8 +462,14 @@
       Sigma Tau Delta
     </p>
   </section>
-
+ 
 </main>
-
+ 
 </body>
 </html>
+ 
+
+
+
+
+0
