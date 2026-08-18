@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Steve Kaminczak — Curriculum Vitae</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  @page { size: Letter; margin: 0.5in; }
+  :root {
+    --ink:#1b1f23; --ink-soft:#3a4149; --muted:#6b7079; --rule:#d6dade;
+    --accent:oklch(45% 0.04 220); --accent-2:oklch(38% 0.05 220);
+    --cta:#b3261e; --paper:#ffffff;
+    --page-w:8.5in; --pad-x:0.75in; --pad-y:0.5in;
+  }
+  * { box-sizing:border-box; }
+  html, body {
+    margin:0; padding:0; background:#e9ecef; color:var(--ink);
+    font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:9.75pt; line-height:1.35; -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .sheet {
+    width:var(--page-w); margin:24px auto; background:var(--paper);
+    padding:var(--pad-y) var(--pad-x);
+    box-shadow:0 2px 6px rgba(0,0,0,.08), 0 12px 32px rgba(0,0,0,.10);
+  }
+  @media print {
+    html, body { background:#fff; }
+    .sheet { margin:0; box-shadow:none; width:auto; padding:0; }
+    a { color:inherit; text-decoration:none; }
+    .cta-link { color:var(--cta)!important; border-color:var(--cta)!important;
+                -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    section { break-inside:auto; }
+    .role, .subentry, .row, li { break-inside:avoid; }
+    h2 { break-after:avoid; }
+  }
+  .header-row { display:flex; justify-content:space-between; align-items:flex-start; gap:18px; }
+  .header-left { flex:1 1 auto; min-width:0; }
+  .header-cta { display:flex; flex-direction:column; align-items:flex-end; gap:4px; flex-shrink:0; padding-top:5px; }
+  .cta-link { font-size:8pt; font-weight:700; letter-spacing:.10em; text-transform:uppercase;
+              color:var(--cta); text-decoration:none; border:1px solid var(--cta);
+              padding:3px 9px; border-radius:2px; white-space:nowrap; line-height:1.15; }
+  .name { font-weight:700; font-size:22pt; letter-spacing:-.01em; color:var(--accent-2);
+          line-height:1.05; margin:0 0 3px 0; }
+  .doctype { font-size:8.5pt; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:0 0 4px 0; }
+  .contact { font-size:9.5pt; color:var(--ink-soft); margin:0 0 8px 0; }
+  .contact .sep { color:var(--muted); margin:0 8px; }
+  .contact a { color:var(--ink-soft); text-decoration:none; }
+  .header-rule { border:0; border-top:1.25px solid var(--accent); margin:0 0 10px 0; }
+  section { margin-bottom:9px; }
+  h2 { font-size:9.75pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+       color:var(--accent); margin:0 0 6px 0; padding-bottom:2px; border-bottom:.6px solid var(--rule); }
+  .summary { margin:0; text-wrap:pretty; }
+  .role { margin:0 0 7px 0; }
+  .role:last-child { margin-bottom:0; }
+  .role-head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:1px; }
+  .role-title { font-weight:600; color:var(--ink); font-size:10pt; }
+  .role-title .org { font-weight:500; color:var(--ink-soft); }
+  .role-dates { font-size:9pt; color:var(--muted); font-variant-numeric:tabular-nums;
+                white-space:nowrap; font-weight:500; }
+  ul.bullets { margin:2px 0 0 0; padding-left:15px; }
+  ul.bullets li { margin:1px 0; }
+  ul.bullets li::marker { color:var(--muted); }
+  ol.cites { margin:2px 0 0 0; padding-left:17px; }
+  ol.cites li { margin:0 0 4px 0; text-wrap:pretty; }
+  ol.cites li::marker { color:var(--muted); font-variant-numeric:tabular-nums; }
+  .row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin:2px 0; }
+  .row .label strong { font-weight:600; }
+  .row .meta { color:var(--muted); font-size:9pt; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .inline-list { margin:0 0 3px 0; text-wrap:pretty; }
+  .inline-list .pipe { color:var(--muted); margin:0 6px; }
+  .skillhead { font-weight:600; color:var(--accent-2); }
+  .subentry { margin:0 0 7px 0; }
+  .subentry-title { font-weight:600; font-size:10pt; }
+  .subentry-title .qual { font-weight:400; color:var(--muted); font-size:9.25pt; }
+  a.inline { color:var(--cta); text-decoration:none; font-weight:600; }
+  a.inline:hover { text-decoration:underline; }
+  .back { display:block; text-align:center; margin:0 auto 8px; max-width:8.5in; font-size:9pt; }
+  .back a { color:var(--accent-2); text-decoration:none; }
+  @media print { .back { display:none; } }
+</style>
+</head>
+<body>
+<main class="sheet" role="document">
+  <header>
+    <div class="header-row">
+      <div class="header-left">
+        <h1 class="name">Steve Kaminczak</h1>
+        <p class="doctype">Curriculum Vitae</p>
+        <p class="contact">
+          Houston, TX<span class="sep">·</span>(979) 436-5969<span class="sep">·</span><a href="mailto:kaminczak@gmail.com">kaminczak@gmail.com</a><span class="sep">·</span>sk.md
+        </p>
+      </div>
+      <div class="header-cta">
+        <a class="cta-link" href="./resume.html">One-Page Resume →</a>
+        <a class="cta-link" href="https://kaminczak.github.io/genre-machine/" target="_blank" rel="noopener">The Genre Machine →</a>
+        <a class="cta-link" href="https://kaminczak.github.io/TEKS-Glossary/" target="_blank" rel="noopener">TEKS Glossary →</a>
+      </div>
+    </div>
+    <hr class="header-rule" />
+  </header>
+
+  <section>
+    <h2>Profile</h2>
+    <p class="summary">
+      Twenty-five years in English language arts across secondary, post-secondary, and editorial settings.
+      Writing center administration at two universities, adjunct faculty training at the community-college
+      system level, and secondary ELA instruction in Title&nbsp;I and ESL-majority classrooms. Standing interests:
+      curriculum and assessment design, tutor-preparation pedagogy, developmental and multilingual writing
+      instruction, and the practical application of AI to instructional content development.
+    </p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="row">
+      <div class="label"><strong>M.A., English</strong> — Sam Houston State University</div>
+      <div class="meta">Dec 2004</div>
+    </div>
+    <div class="row">
+      <div class="label"><strong>B.A., English</strong> — Sam Houston State University (minor: Philosophy)</div>
+      <div class="meta">Dec 2001</div>
+    </div>
+    <div class="row">
+      <div class="label">Coursework: Renaissance &amp; 20th-century literature, literary criticism &amp; theory, English linguistics, Shakespeare, classical &amp; medieval philosophy</div>
+      <div class="meta"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certification &amp; Licensure</h2>
+    <div class="row">
+      <div class="label"><strong>Texas Classroom Teacher — English Language Arts and Reading, Grades 7–12</strong> (Standard, SBEC)</div>
+      <div class="meta">Valid to 2028</div>
+    </div>
+    <div class="row">
+      <div class="label"><strong>Texas Classroom Teacher — English as a Second Language Supplemental, Grades 7–12</strong> (Standard, SBEC)</div>
+      <div class="meta">Valid to 2028</div>
+    </div>
+    <div class="row">
+      <div class="label"><strong>College Reading &amp; Learning Association — Master Level</strong> tutor certification (cross-age literacy)</div>
+      <div class="meta">2000</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Academic &amp; Administrative Appointments</h2>
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">Program Manager III + Adjunct Faculty <span class="org">— Lone Star College–CyFair</span></div>
+        <div class="role-dates">2013 – 2015</div>
+      </div>
+      <ul class="bullets">
+        <li>Designed and ran adjunct faculty onboarding for the CyFair campus (~1,000 adjuncts), coordinating a two-week multi-department training sequence</li>
+        <li>Administered TurnItIn and Lynda.com (now LinkedIn Learning) at campus level — course assignment, completion tracking, usage reporting</li>
+        <li>Taught Freshman Composition I in hybrid delivery (live + asynchronous)</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">Assistant Director, University Writing Center <span class="org">— Texas A&amp;M University</span></div>
+        <div class="role-dates">2007 – 2012</div>
+      </div>
+      <ul class="bullets">
+        <li>Designed and taught the credit-bearing tutor-preparation pedagogy course the full staff worked from; ran 5+ years across live, asynchronous, and observation-based modes</li>
+        <li>Built and owned the master tutoring schedule across two campus locations for a staff of 15–20 undergraduate and graduate tutors</li>
+        <li>Served on the development committee for CLEO, an open-source tutoring scheduling and document-management platform — translated tutor workflows into feature specifications with engineering</li>
+        <li>Multi-year collaboration with the Department of Biological &amp; Agricultural Engineering on writing-assessment calibration for a W-designated course</li>
+        <li>Manuscript reviewer, <em>The Writing Lab Newsletter</em> (2008–2009)</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">Assistant Director, Writing Center <span class="org">— Sam Houston State University</span></div>
+        <div class="role-dates">2005 – 2007</div>
+      </div>
+      <ul class="bullets">
+        <li>Interviewed and hired undergraduate and graduate tutors; built weekly staffing schedules</li>
+        <li>Built the tutor onboarding cycle: observation, calibration, and end-of-semester portfolio review</li>
+        <li>Created training materials for tutors serving writers from developmental through post-doctoral levels</li>
+        <li>Designed <em>Talk Time</em>, a conversation-partner program pairing international students (primarily Korean) with Writing Center staff for English practice — the only secular program of its kind at the university</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Secondary Teaching Appointments</h2>
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">ELAR Instructor <span class="org">— Middle College at HCC Gulfton, Houston ISD</span></div>
+        <div class="role-dates">2025 – 2026</div>
+      </div>
+      <ul class="bullets">
+        <li>Developed TEKS-aligned warm-ups, lessons, and assessments for English I in an ESL-majority environment</li>
+        <li>Built scaffolded writing prompts and reading guides adapted for emergent bilingual learners</li>
+        <li>Designed an AP Course Audit–compliant AP English Language and Composition course: a 7-unit, 28-week scope and sequence dual-aligned to College Board Big Ideas and Essential Skills and to Texas ELA TEKS, with weighted assessment architecture and an AP 9-point rubric conversion table</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">ELA Instructor <span class="org">— Westbury High School (NES campus), Houston ISD</span></div>
+        <div class="role-dates">2019 – 2025</div>
+      </div>
+      <ul class="bullets">
+        <li>Designed and implemented English I, English II, English III, and Reading III curriculum aligned to STAAR redesign standards; campus rating improved D → B during tenure</li>
+        <li>Taught fully online for the COVID closure — roughly three semesters of full-time virtual secondary English instruction via Microsoft Teams, Nearpod, Kahoot, and Canva, followed by concurrent in-person/remote sections through phased reopening; supported colleagues' transition to online instruction</li>
+        <li>Built and taught a full-year Graphic Novels elective (English IV) covering <em>Watchmen</em>, <em>Maus</em>, <em>Persepolis</em>, and <em>American Born Chinese</em>; authored the diagnostic and vocabulary materials and managed parent content disclosure and opt-out for mature texts</li>
+        <li>Delivered Texas College Bridge (TEA/Texas OnCourse) online college-readiness instruction</li>
+        <li>T-TESS rating: Proficient</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <div class="role-title">ELA Instructor <span class="org">— Houston Can Academy–Southwest / Texans Can Academies</span></div>
+        <div class="role-dates">2015 – 2019</div>
+      </div>
+      <ul class="bullets">
+        <li>Part of a team effort that raised English I and English II EOC pass rates from roughly 20% to 80% through targeted content development</li>
+        <li>Created differentiated materials and online credit-recovery instruction for over-age/under-credit students</li>
+        <li>Wrote assessment items, essay prompts, and warm-up sequences aligned to TEKS and STAAR blueprints</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Post-Secondary Teaching</h2>
+    <div class="row">
+      <div class="label"><strong>Lone Star College System</strong> — Freshman Composition I (ENGL 1301), hybrid and face-to-face; three sections documented Spring 2014</div>
+      <div class="meta">2001–2003, 2013–2015</div>
+    </div>
+    <div class="row">
+      <div class="label"><strong>Texas A&amp;M University</strong> — credit-bearing tutor-preparation pedagogy course</div>
+      <div class="meta">2007 – 2012</div>
+    </div>
+    <div class="row">
+      <div class="label"><strong>Sam Houston State University</strong> — Freshman Composition, Literature, TOEFL preparation, and state-mandated developmental writing under the Texas Academic Skills Program (TASP)</div>
+      <div class="meta">2002 – 2007</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Conference Presentations</h2>
+    <ol class="cites">
+      <li>“Calibrating Rubrics in Writing.” <em>Teaching &amp; Learning Symposium</em>, Lone Star College–CyFair, 2013.</li>
+      <li>With S. Searcy, C. Munster, C. Schaefer, and V. Balester. “Designing Assessment Methods for a W Course in Agricultural Systems Management: Successes and Failures.” <em>Texas A&amp;M Assessment Conference</em>, College Station, TX, 2011.</li>
+      <li>With S. Grogan, D. Bennett, M. Gilchrist, and K. Abels. Session on do-it-yourself development, modification, and sharing of writing center technologies. <em>Computers and Writing Conference</em>, Ann Arbor, MI, 2011.</li>
+      <li>With C. Schaefer. “Using TurnItIn to Teach Source Integration.” <em>Teaching with Technology Conference</em>, Texas A&amp;M University, 2011. Repeated at Lone Star College, 2015.</li>
+      <li>With A. Mitchell. “Pirates vs. Ninjas: Two Styles of Teaching.” <em>Academic Peer Educator Conference</em>, College Station, TX, 2011. (Also presented at APEC 2009 and 2010.)</li>
+      <li>With K. Abels, D. Bennett, M. J. Gilchrist, and S. Grogan. “Navigating Technology and Innovation in Writing Centers.” <em>International Writing Centers Association Conference</em>, Baltimore, MD, 2010.</li>
+      <li>With M. Wall and M. Crawford. “Write Out Loud with Podcasts.” <em>18th Annual South Central Writing Centers Association Conference</em>, University of Oklahoma, Norman, OK, March 2008. Hands-on workshop; podcasts recorded live in session.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Editorial &amp; Publishing</h2>
+    <div class="row">
+      <div class="label"><strong>Texas Review Press</strong> (TRP: The University Press of SHSU) — Assistant to the Editor under Dr. Paul Ruffin; manuscript editing, proofreading, and production for an academic literary press</div>
+      <div class="meta">1996 – 2006</div>
+    </div>
+    <div class="row">
+      <div class="label"><strong><em>The Writing Lab Newsletter</em></strong> — Manuscript reviewer</div>
+      <div class="meta">2008 – 2009</div>
+    </div>
+    <div class="row">
+      <div class="label"><strong>SHSU WAC Newsletter</strong> — Production Editor</div>
+      <div class="meta">1999 – 2000</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Curriculum, Digital &amp; AI Projects</h2>
+
+    <div class="subentry">
+      <div class="subentry-title">TEKS Curriculum Library <span class="qual">— independent project, self-built in React, 2025–present</span></div>
+      <ul class="bullets">
+        <li>Complete standards-aligned reference covering all 278 English I–IV student expectations (19 TAC Ch. 110, Subch. C) — English I (72), II (68), III (69), IV (69). <a class="inline" href="https://kaminczak.github.io/TEKS-Glossary/" target="_blank" rel="noopener">View the live glossary →</a></li>
+        <li>Each entry carries a plain-language overview, a student-facing translation, 10+ STAAR-phrased question stems, vertical alignment to prior and next grade, and common misconceptions</li>
+        <li>Tagged by DOK level, Bloom's taxonomy, cadence, and instructional strand</li>
+      </ul>
+    </div>
+
+    <div class="subentry">
+      <div class="subentry-title">The Genre Machine <span class="qual">— independent project, 2025–present</span></div>
+      <ul class="bullets">
+        <li>A genre-literacy tool that retells the same tale across forty genres, including obscure forms (ergodic, slipstream, Bangsian), each with its characteristics, sample titles, and a brief history. <a class="inline" href="https://kaminczak.github.io/genre-machine/" target="_blank" rel="noopener">View the live site →</a></li>
+        <li>Locally generated voice narration and original score for every retelling, with a Spanish/English toggle</li>
+        <li>Built on a four-lens model of genre — setting and world building, tone and atmosphere, character traits and motivation, and language and syntax</li>
+      </ul>
+    </div>
+
+    <div class="subentry">
+      <div class="subentry-title">“STAAR Trek” — Gamified Mastery Unit with AI-Generated Media <span class="qual">— English III, ~110 students, Feb–Mar 2023</span></div>
+      <ul class="bullets">
+        <li>Full gamified STAAR-mastery unit with scripted, AI-voiced narrative video, per-student identity media, physical collectible rewards, and a quantitatively modeled reward economy sized across 110 students and 15 earning opportunities</li>
+        <li>Produced roughly twelve weeks after the public release of ChatGPT; iterated the following semester into a competitive clan-based mastery system</li>
+      </ul>
+    </div>
+
+    <div class="subentry">
+      <div class="subentry-title">Kaizen Vault <span class="qual">— production AI workflow, 2025–present</span></div>
+      <ul class="bullets">
+        <li>Claude Code plus MCP servers (Obsidian, filesystem, Gmail, Calendar) running a 19,000+ document archive with searchable retrieval and custom document-processing scripts</li>
+        <li>Daily AI-assisted instructional content workflow, designed FERPA-aware</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Professional Development</h2>
+    <div class="row">
+      <div class="label">Houston ISD inaugural AI Cohort — AI/LLM applications in K–12 instruction; led roughly half the sessions</div>
+      <div class="meta">2024</div>
+    </div>
+    <div class="row">
+      <div class="label">College Board AP training — English Language and Composition, AP Seminar, AP Research</div>
+      <div class="meta"></div>
+    </div>
+    <div class="row">
+      <div class="label">Adjunct Certification Program — Lone Star College</div>
+      <div class="meta">2015</div>
+    </div>
+    <div class="row">
+      <div class="label">Diversity Training Institute Certified — Texas A&amp;M University</div>
+      <div class="meta">2009</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <p class="inline-list"><span class="skillhead">eLearning authoring:</span>
+      Articulate Storyline<span class="pipe">|</span>Articulate Engage<span class="pipe">|</span>Adobe Captivate<span class="pipe">|</span>iSpring<span class="pipe">|</span>Camtasia<span class="pipe">|</span>H5P<span class="pipe">|</span>SCORM
+    </p>
+    <p class="inline-list"><span class="skillhead">AI &amp; technical:</span>
+      AI/LLM prompt design<span class="pipe">|</span>RAG workflows<span class="pipe">|</span>Claude Code + MCP servers<span class="pipe">|</span>local model and voice generation<span class="pipe">|</span>FERPA-aware AI workflow design<span class="pipe">|</span>React
+    </p>
+    <p class="inline-list"><span class="skillhead">LMS &amp; platforms:</span>
+      Canvas<span class="pipe">|</span>Blackboard<span class="pipe">|</span>PowerSchool<span class="pipe">|</span>Google Classroom<span class="pipe">|</span>Microsoft Teams<span class="pipe">|</span>TurnItIn<span class="pipe">|</span>Nearpod<span class="pipe">|</span>Socrative<span class="pipe">|</span>Kahoot<span class="pipe">|</span>Canva
+    </p>
+    <p class="inline-list"><span class="skillhead">Instructional:</span>
+      Curriculum and scope-and-sequence design<span class="pipe">|</span>syllabus authoring<span class="pipe">|</span>standards alignment (TEKS, College Board)<span class="pipe">|</span>rubric design and calibration<span class="pipe">|</span>assessment item writing<span class="pipe">|</span>STAAR/EOC data analysis<span class="pipe">|</span>RtI/MTSS<span class="pipe">|</span>ESL and emergent bilingual strategies<span class="pipe">|</span>developmental writing<span class="pipe">|</span>credit recovery<span class="pipe">|</span>tutor-training pedagogy<span class="pipe">|</span>Socratic discussion facilitation<span class="pipe">|</span>close reading and rhetorical analysis
+    </p>
+    <p class="inline-list"><span class="skillhead">Languages:</span> English (native)<span class="pipe">|</span>Spanish (basic)</p>
+  </section>
+
+  <section>
+    <h2>Professional Memberships</h2>
+    <p class="inline-list">
+      National Council of Teachers of English<span class="pipe">|</span>International Writing Centers Association<span class="pipe">|</span>College Reading &amp; Learning Association<span class="pipe">|</span>Houston Federation of Teachers<span class="pipe">|</span>Sigma Tau Delta
+    </p>
+  </section>
+
+</main>
+<p class="back"><a href="./index.html">← sk.md</a></p>
+</body>
+</html>

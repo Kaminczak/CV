@@ -2,487 +2,100 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Steve Kaminczak — Resume</title>
+<title>Steve Kaminczak</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-  /* ---------- Page setup ---------- */
-  @page {
-    size: Letter;
-    margin: 0;
-  }
- 
   :root {
-    --ink:        #1b1f23;            /* near-black text */
-    --ink-soft:   #3a4149;            /* secondary text */
-    --muted:      #6b7079;            /* tertiary / dates */
-    --rule:       #d6dade;            /* hairline rules */
-    --accent:     oklch(45% 0.04 220);/* muted slate-teal */
-    --accent-2:   oklch(38% 0.05 220);/* darker variant for name */
-    --cta:        #b3261e;            /* deep crimson for call-to-action links */
-    --paper:      #ffffff;
- 
-    --page-w: 8.5in;
-    --page-h: 11in;
-    --pad-x: 0.55in;
-    --pad-y: 0.3in;
+    --ink:      #1b1f23;
+    --ink-soft: #3a4149;
+    --muted:    #6b7079;
+    --rule:     #d6dade;
+    --accent:   oklch(45% 0.04 220);
+    --accent-2: oklch(38% 0.05 220);
+    --cta:      #b3261e;
+    --paper:    #ffffff;
   }
- 
   * { box-sizing: border-box; }
- 
   html, body {
-    margin: 0;
-    padding: 0;
-    background: #e9ecef;        /* gray around the "paper" on screen */
+    margin: 0; padding: 0;
+    background: #e9ecef;
     color: var(--ink);
-    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 9.25pt;
-    line-height: 1.28;
+    font-family: 'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 16px; line-height: 1.45;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
- 
-  /* On-screen: show the page as a "sheet" centered on a gray field */
-  .sheet {
-    width: var(--page-w);
-    min-height: var(--page-h);
-    margin: 24px auto;
+  .wrap {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 3rem;
+  }
+  .card {
     background: var(--paper);
-    padding: var(--pad-y) var(--pad-x);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 12px 32px rgba(0,0,0,0.10);
-    color: var(--ink);
+    padding: 2.25rem 2rem 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08), 0 12px 32px rgba(0,0,0,.10);
   }
- 
-  /* Print: no shadow, no gray, fills the actual page */
-  @media print {
-    html, body { background: #fff; }
-    .sheet {
-      margin: 0;
-      box-shadow: none;
-      width: var(--page-w);
-      min-height: var(--page-h);
-    }
-    a { color: inherit; text-decoration: none; }
-    /* Keep CTA links red & visible when printed */
-    .cta-link { color: var(--cta) !important; border-color: var(--cta) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  }
- 
-  /* ---------- Header ---------- */
-  .header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 18px;
-  }
-  .header-left { flex: 1 1 auto; min-width: 0; }
-  .header-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 4px;
-    flex-shrink: 0;
-    padding-top: 5px;
-  }
-  .cta-link {
-    font-size: 8pt;
-    font-weight: 700;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    color: var(--cta);
-    text-decoration: none;
-    border: 1px solid var(--cta);
-    padding: 3px 9px;
-    border-radius: 2px;
-    white-space: nowrap;
-    line-height: 1.15;
-  }
- 
-  .name {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 22pt;
-    letter-spacing: -0.01em;
+  h1 {
+    font-size: 2rem; font-weight: 700;
+    letter-spacing: -.01em; line-height: 1.05;
     color: var(--accent-2);
-    line-height: 1.05;
-    margin: 0 0 3px 0;
+    margin: 0 0 .35rem 0;
   }
- 
-  .contact {
-    font-size: 9.25pt;
-    color: var(--ink-soft);
-    letter-spacing: 0.01em;
-    margin: 0 0 8px 0;
-  }
-  .contact .sep {
-    color: var(--muted);
-    margin: 0 8px;
-  }
-  .contact a {
-    color: var(--ink-soft);
+  .contact { color: var(--ink-soft); font-size: .95rem; margin: 0 0 1.25rem 0; }
+  .contact a { color: var(--ink-soft); text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+  .contact .sep { color: var(--muted); margin: 0 .5rem; }
+  hr.rule { border: 0; border-top: 1.25px solid var(--accent); margin: 0 0 1.5rem 0; }
+  .links { display: flex; flex-direction: column; gap: .75rem; }
+  a.link {
+    display: block;
     text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--cta);
+    padding: .85rem 1rem;
+    transition: background .12s ease, border-color .12s ease, transform .12s ease;
   }
- 
-  .header-rule {
-    border: 0;
-    border-top: 1.25px solid var(--accent);
-    margin: 0 0 8px 0;
+  a.link:hover { background: #fafbfc; border-color: var(--accent); transform: translateX(2px); }
+  a.link .t {
+    font-weight: 700; font-size: .82rem;
+    letter-spacing: .10em; text-transform: uppercase;
+    color: var(--cta); display: block; margin-bottom: .2rem;
   }
- 
-  /* ---------- Sections ---------- */
-  section {
-    margin-bottom: 4px;
-  }
- 
-  h2 {
-    font-size: 9.75pt;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 5px 0;
-    padding-bottom: 2px;
-    border-bottom: 0.6px solid var(--rule);
-  }
- 
-  /* ---------- Summary paragraph ---------- */
-  .summary {
-    margin: 0;
-    color: var(--ink);
-    text-wrap: pretty;
-  }
- 
-  /* ---------- Job/role entries ---------- */
-  .role {
-    margin: 3px 0 3px 0;
-  }
-  .role:last-child { margin-bottom: 0; }
- 
-  .role-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 1px;
-  }
-  .role-title {
-    font-weight: 600;
-    color: var(--ink);
-    font-size: 10pt;
-  }
-  .role-title .org {
-    font-weight: 500;
-    color: var(--ink-soft);
-  }
-  .role-dates {
-    font-size: 9pt;
-    color: var(--muted);
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
-    font-weight: 500;
-  }
- 
-  ul.bullets {
-    margin: 2px 0 0 0;
-    padding-left: 15px;
-  }
-  ul.bullets li {
-    margin: 0.5px 0;
-    color: var(--ink);
-  }
-  ul.bullets li::marker {
-    color: var(--muted);
-  }
- 
-  /* ---------- Two-column compact rows (Education etc.) ---------- */
-  .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 12px;
-    margin: 1px 0;
-  }
-  .row .label {
-    color: var(--ink);
-  }
-  .row .label strong {
-    font-weight: 600;
-  }
-  .row .meta {
-    color: var(--muted);
-    font-size: 9pt;
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
-  }
- 
-  /* ---------- Inline lists (skills, memberships) ---------- */
-  .inline-list {
-    color: var(--ink);
-    margin: 0;
-    text-wrap: pretty;
-  }
-  .inline-list .pipe {
-    color: var(--muted);
-    margin: 0 6px;
-  }
- 
-  /* ---------- Subentry (the TEKS reference tool block) ---------- */
-  .subentry {
-    margin: 2px 0 3px 0;
-  }
-  .subentry-title {
-    font-weight: 600;
-    font-size: 10pt;
-    color: var(--ink);
-  }
-  .subentry-title .qual {
-    font-weight: 400;
-    color: var(--muted);
-    font-size: 9.25pt;
-  }
+  a.link .d { color: var(--ink-soft); font-size: .93rem; }
+  footer { margin-top: 1.75rem; padding-top: 1rem; border-top: .6px solid var(--rule);
+           color: var(--muted); font-size: .82rem; }
+  @media (max-width: 480px) { .wrap { padding: 2rem 1rem; } .card { padding: 1.5rem 1.25rem; } h1 { font-size: 1.6rem; } }
 </style>
 </head>
 <body>
- 
-<main class="sheet" role="document">
- 
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="header-row">
-      <div class="header-left">
-        <h1 class="name">Steve Kaminczak</h1>
-        <p class="contact">
-          Houston, TX
-          <span class="sep">·</span>
-          (979) 436-5969
-          <span class="sep">·</span>
-          <a href="mailto:kaminczak@gmail.com">kaminczak@gmail.com</a>
-          <span class="sep">·</span>
-          sk.md
-        </p>
-      </div>
-      <div class="header-cta">
-        <a class="cta-link" href="https://kaminczak.github.io/TEKS-Glossary/" target="_blank" rel="noopener">TEKS Glossary (Work in Progress) →</a>
-        <a class="cta-link" href="https://kaminczak.github.io/genre-machine/" target="_blank" rel="noopener">The Genre Machine →</a>
-        <a class="cta-link" href="https://kaminczak.github.io/Batman-Archetype/" target="_blank" rel="noopener">Batman: Archetype →</a>
-      </div>
-    </div>
-    <hr class="header-rule" />
-  </header>
- 
-  <!-- ===== SUMMARY ===== -->
-  <section>
-    <h2>Professional Summary</h2>
-    <p class="summary">
-      25-year ELA teacher and writing center administrator with Texas ELA certification (Grades 7&ndash;12) and a
-      CRLA Master-level tutor cert (cross-age literacy). Contributed to a team that drove English I/II
-      EOC pass rates significantly upward at a Title-I charter, and earned T-TESS Proficient at a NES
-      campus. Decade of Writing Center administration at Texas A&amp;M and Sam Houston State, with
-      tutor-prep pedagogy course design and contributions to CLEO, an open-source tutoring platform.
-      Author of a complete TEKS curriculum library covering all 278 English I–IV student expectations,
-      mapping each standard to student-facing language, STAAR-phrased question stems, vertical
-      alignment, and common classroom misconceptions.
+<div class="wrap">
+  <main class="card">
+    <h1>Steve Kaminczak</h1>
+    <p class="contact">
+      Houston, TX<span class="sep">·</span>(979) 436-5969<span class="sep">·</span><a href="mailto:kaminczak@gmail.com">kaminczak@gmail.com</a>
     </p>
-  </section>
- 
-  <!-- ===== EXPERIENCE ===== -->
-  <section>
-    <h2>Relevant Experience</h2>
- 
-    <div class="role">
-      <div class="role-head">
-        <div class="role-title">ELAR Instructor <span class="org">— Middle College at HCC Gulfton (HISD)</span></div>
-        <div class="role-dates">2025 – 2026</div>
-      </div>
-      <ul class="bullets">
-        <li>Developed TEKS-aligned warm-ups, lessons, and assessments for English I in an ESL-majority environment</li>
-        <li>Created scaffolded writing prompts and reading guides adapted for emergent bilingual learners</li>
-        <li>Integrated AI tools for content differentiation and formative assessment design</li>
-      </ul>
+    <hr class="rule" />
+    <div class="links">
+      <a class="link" href="./resume.html">
+        <span class="t">Resume →</span>
+        <span class="d">One page. ELA instruction, curriculum development, and instructional design.</span>
+      </a>
+      <a class="link" href="./cv.html">
+        <span class="t">Complete CV →</span>
+        <span class="d">Full record — appointments, courses designed, conference presentations, publications, and projects.</span>
+      </a>
+      <a class="link" href="https://kaminczak.github.io/genre-machine/" target="_blank" rel="noopener">
+        <span class="t">The Genre Machine →</span>
+        <span class="d">From the portfolio. One tale retold across forty genres, with narration, original music, and a Spanish/English toggle — built to make genre literacy click.</span>
+      </a>
     </div>
- 
-    <div class="role">
-      <div class="role-head">
-        <div class="role-title">ELA Instructor <span class="org">— Westbury High School, NES Campus (HISD)</span></div>
-        <div class="role-dates">2019 – 2025</div>
-      </div>
-      <ul class="bullets">
-        <li>Designed and implemented English I and English II curriculum aligned to STAAR redesign standards</li>
-        <li>Earned T-TESS Proficient rating during tenure</li>
-        <li>Collaborated with department team on vertical alignment and content standardization across grade levels</li>
-      </ul>
-    </div>
- 
-    <div class="role">
-      <div class="role-head">
-        <div class="role-title">ELA Instructor <span class="org">— Houston Can Academy–Southwest</span></div>
-        <div class="role-dates">2015 – 2019</div>
-      </div>
-      <ul class="bullets">
-        <li>Contributed to a team effort that produced substantial gains in English I and English II EOC pass rates through targeted content development</li>
-        <li>Created differentiated materials for credit-recovery and over-age/under-credit students</li>
-        <li>Wrote assessment items, essay prompts, and warm-up sequences aligned to TEKS and STAAR blueprints</li>
-      </ul>
-    </div>
- 
-    <div class="role">
-      <div class="role-head">
-        <div class="role-title">Program Manager III + Adjunct <span class="org">— Lone Star College – CyFair</span></div>
-        <div class="role-dates">2013 – 2015</div>
-      </div>
-      <ul class="bullets">
-        <li>Designed and ran adjunct faculty onboarding for the Lone Star College system (~1,000 faculty), coordinating a two-week multi-department training sequence</li>
-        <li>Administered campus-level TurnItIn and Lynda.com — pushed course assignments, tracked faculty completion data, and reported on platform usage</li>
-        <li>Taught Freshman Composition I as hybrid adjunct — live + asynchronous developmental writing</li>
-      </ul>
-    </div>
-  </section>
- 
-  <!-- ===== CURRICULUM & CONTENT DEVELOPMENT ===== -->
-  <section>
-    <h2>Curriculum &amp; Content Development</h2>
- 
-    <div class="subentry">
-      <div class="subentry-title">
-        TEKS Curriculum Library <span class="qual">— Independent Project, self-built, 2025–Present</span>
-      </div>
-      <ul class="bullets">
-        <li>Complete standards-aligned reference covering all 278 English I–IV student expectations (19 TAC Ch. 110, Subch. C) — English I (72), II (68), III (69), IV (69). <a href="https://kaminczak.github.io/TEKS-Glossary/" target="_blank" rel="noopener"><strong>View the live glossary →</strong></a></li>
-        <li>Each entry includes: plain-language overview, student-facing translation (“Say it to a student”), 10+ question stems, vertical alignment (prior/current/next grade), and common misconceptions</li>
-        <li>Tagged by DOK level, Bloom’s taxonomy, cadence, and instructional strand; designed for content writers, instructional coaches, and classroom teachers</li>
-      </ul>
-    </div>
- 
-    <div class="subentry">
-      <div class="subentry-title">
-        Kaizen Vault <span class="qual">— Production AI Workflow</span>
-      </div>
-      <ul class="bullets">
-        <li>Claude Code + MCP (Obsidian, filesystem, Gmail, Calendar) running a 19k+ document archive with searchable retrieval</li>
-        <li>Daily AI-assisted instructional content workflow</li>
-      </ul>
-    </div>
- 
-    <div class="role">
-      <div class="role-head">
-        <div class="role-title">Assistant Director <span class="org">— Texas A&amp;M University Writing Center</span></div>
-        <div class="role-dates">2007 – 2012</div>
-      </div>
-      <ul class="bullets">
-        <li>Built tutor-prep pedagogy course for new adult tutors across live + asynchronous + observation-based modes; credit-bearing course ran 5+ years</li>
-        <li>Served on CLEO platform development committee — open-source tutoring platform; translated tutor workflows into feature specifications with engineering</li>
-        <li>Reviewed manuscripts for <em>The Writing Lab Newsletter</em> (2008–2009)</li>
-      </ul>
-    </div>
- 
-    <div class="role">
-      <div class="role-head">
-        <div class="role-title">Assistant Director <span class="org">— Sam Houston State University Writing Center</span></div>
-        <div class="role-dates">2005 – 2007</div>
-      </div>
-      <ul class="bullets">
-        <li>Built tutor onboarding cycle: observation, calibration, end-of-semester portfolio review</li>
-        <li>Created training materials for writing tutors serving developmental through graduate-level students</li>
-        <li>Taught Developmental Writing, Freshman Composition, and TOEFL preparation; created <em>Talk Time</em>, a weekly conversation workshop pairing ESL students with writing tutors</li>
-      </ul>
-    </div>
-  </section>
- 
-  <!-- ===== EDITING & PUBLISHING ===== -->
-  <section>
-    <h2>Editing &amp; Publishing</h2>
-    <div class="row">
-      <div class="label"><strong>Texas Review Press</strong> — Assistant to Editor; manuscript editing, proofreading, and production for an academic literary press</div>
-      <div class="meta">1996 – 2006</div>
-    </div>
-    <div class="row">
-      <div class="label"><strong>SHSU WAC Newsletter</strong> — Production Editor</div>
-      <div class="meta">1999 – 2000</div>
-    </div>
-  </section>
- 
-  <!-- ===== EDUCATION ===== -->
-  <section>
-    <h2>Education</h2>
-    <div class="row">
-      <div class="label"><strong>M.A., English</strong> — Sam Houston State University</div>
-      <div class="meta">Dec 2004</div>
-    </div>
-    <div class="row">
-      <div class="label"><strong>B.A., English</strong> — Sam Houston State University (minor: Philosophy)</div>
-      <div class="meta">Dec 2001</div>
-    </div>
-    <div class="row">
-      <div class="label">Relevant coursework: Renaissance &amp; 20th-century literature, literary criticism &amp; theory, English linguistics, Shakespeare, classical &amp; medieval philosophy</div>
-      <div class="meta"></div>
-    </div>
-  </section>
- 
-  <!-- ===== CERTIFICATIONS ===== -->
-  <section>
-    <h2>Certifications &amp; Professional Development</h2>
-    <div class="row">
-      <div class="label">HISD AI Cohort — AI/LLM applications in K–12 instruction</div>
-      <div class="meta">2024</div>
-    </div>
-    <div class="row">
-      <div class="label">Texas ELA Certification, Grades 7–12</div>
-      <div class="meta">2016</div>
-    </div>
-    <div class="row">
-      <div class="label">Adjunct Certification Program — Lone Star College</div>
-      <div class="meta">2015</div>
-    </div>
-    <div class="row">
-      <div class="label">Texas A&amp;M Diversity Training Institute Certified</div>
-      <div class="meta">2009</div>
-    </div>
-    <div class="row">
-      <div class="label">College Reading &amp; Learning Association, Master Level (cross-age literacy)</div>
-      <div class="meta">2000</div>
-    </div>
-  </section>
- 
-  <!-- ===== TECHNICAL SKILLS ===== -->
-  <section>
-    <h2>Technical Skills</h2>
-    <p class="inline-list">
-      Claude Code + MCP servers<span class="pipe">|</span>
-      RAG workflows<span class="pipe">|</span>
-      AI/LLM prompt design<span class="pipe">|</span>
-      FERPA-aware AI workflow design<span class="pipe">|</span>
-      STAAR/EOC data analysis<span class="pipe">|</span>
-      TEKS curriculum alignment<span class="pipe">|</span>
-      Canvas LMS<span class="pipe">|</span>
-      PowerSchool<span class="pipe">|</span>
-      Google Classroom<span class="pipe">|</span>
-      H5P interactive content<span class="pipe">|</span>
-      SCORM authoring<span class="pipe">|</span>
-      Socratic discussion facilitation<span class="pipe">|</span>
-      Close reading &amp; rhetorical analysis
-    </p>
-  </section>
- 
-  <!-- ===== MEMBERSHIPS ===== -->
-  <section>
-    <h2>Professional Memberships</h2>
-    <p class="inline-list">
-      National Council of Teachers of English<span class="pipe">|</span>
-      International Writing Center Association<span class="pipe">|</span>
-      College Reading &amp; Learning Association<span class="pipe">|</span>
-      Houston Federation of Teachers<span class="pipe">|</span>
-      Sigma Tau Delta
-    </p>
-  </section>
- 
-</main>
- 
+    <footer>
+      Also live: <a href="https://kaminczak.github.io/TEKS-Glossary/" target="_blank" rel="noopener" style="color:var(--ink-soft)">TEKS Glossary</a> — all 278 English I–IV student expectations. Full portfolio site in progress.
+    </footer>
+  </main>
+</div>
 </body>
 </html>
- 
-
-
-
-
-0
