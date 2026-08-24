@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Steve Kaminczak — ELAR curriculum &amp; instructional design</title>
+<meta name="description" content="English language arts curriculum designer and TEKS specialist. Builds standards references, genre-literacy tools, and AI-assisted content workflows." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16191c;
+    --paper:#fcfcfa;
+    --rule:#d9dad3;
+    --pen:#2f5d50;
+    --quiet:#7c8178;
+    --measure:34rem;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:18px;
+    font-weight:300;
+    line-height:1.55;
+    padding:clamp(2.5rem,7vw,6rem) clamp(1.25rem,5vw,3rem) 5rem;
+  }
+  .sheet{max-width:52rem;margin:0 auto}
+
+  /* marginalia layout: mono note in the left gutter, content at reading measure */
+  .row{
+    display:grid;
+    grid-template-columns:7.5rem minmax(0,var(--measure));
+    gap:0 2.25rem;
+    align-items:start;
+  }
+  .note{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.7rem;
+    font-weight:400;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--pen);
+    padding-top:.55rem;
+    text-align:right;
+  }
+  @media (max-width:640px){
+    .row{grid-template-columns:1fr;gap:0}
+    .note{text-align:left;padding-top:0;margin-bottom:.35rem}
+  }
+
+  h1{
+    font-size:clamp(2.1rem,6.5vw,3.1rem);
+    font-weight:400;
+    line-height:1.05;
+    letter-spacing:-.015em;
+    margin:0 0 .9rem;
+  }
+  .lede{
+    font-size:clamp(1.15rem,3.2vw,1.4rem);
+    line-height:1.4;
+    margin:0;
+    max-width:30rem;
+  }
+  .lede em{font-style:italic;color:var(--pen)}
+  .thesis{
+    font-size:1rem;
+    line-height:1.5;
+    color:#4a4f52;
+    max-width:29rem;
+    margin:1.1rem 0 0;
+    padding-left:1rem;
+    border-left:2px solid var(--rule);
+  }
+
+  hr{
+    border:0;
+    border-top:1px solid var(--rule);
+    margin:clamp(2.5rem,6vw,3.5rem) 0;
+  }
+
+  h2{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.7rem;
+    font-weight:500;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--quiet);
+    margin:0 0 1.75rem;
+  }
+
+  .work{margin-bottom:2.5rem}
+  .work:last-of-type{margin-bottom:0}
+  .work h3{
+    font-size:1.35rem;
+    font-weight:500;
+    line-height:1.2;
+    margin:0 0 .4rem;
+  }
+  .work h3 a{
+    color:var(--ink);
+    text-decoration:none;
+    background-image:linear-gradient(var(--pen),var(--pen));
+    background-size:100% 1px;
+    background-repeat:no-repeat;
+    background-position:0 100%;
+    padding-bottom:1px;
+    transition:background-size .18s ease,color .18s ease;
+  }
+  .work h3 a:hover,.work h3 a:focus-visible{color:var(--pen)}
+  .work p{margin:0;color:#31363a}
+  .host{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.72rem;
+    letter-spacing:.02em;
+    color:var(--quiet);
+    display:block;
+    margin-top:.5rem;
+  }
+
+  .contact p{margin:0 0 .35rem}
+  a{color:var(--pen)}
+  a:focus-visible{outline:2px solid var(--pen);outline-offset:3px;border-radius:2px}
+  .cv a{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.78rem;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+  }
+  .cv a:hover{border-bottom-color:var(--pen)}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="row">
+    <div class="note">ELAR · 25 yrs</div>
+    <div>
+      <h1>Steve&nbsp;Kaminczak</h1>
+      <p class="lede">I design English language arts curriculum &mdash; and I <em>build the tools it runs on</em>.</p>
+      <p class="thesis">Twenty-five years teaching ELA; now building with AI. It isn't a replacement for educators &mdash; it hands a teacher the software team they were never going to get, and the limits stop being technical and become the only ones worth having.</p>
+    </div>
+  </header>
+
+  <hr />
+
+  <section class="row">
+    <div class="note">Projects</div>
+    <div>
+      <h2>Things I've built</h2>
+
+      <article class="work">
+        <h3><a href="https://thegenremachine.com">The Genre Machine</a></h3>
+        <p>Four fairy tales &times; forty-one genre lenses = 164 complete retellings of the same unchanging plot. Pick <em>The Three Little Pigs</em> in film noir and the prose turns to clipped shadows &mdash; and so does the narrator's voice, the score, the illustration. The plot never moves, so the genre shift itself does the teaching. Every retelling is in Spanish too. Free, no login, built for the classroom.</p>
+        <span class="host">thegenremachine.com &middot; CC BY-NC-SA</span>
+      </article>
+
+      <article class="work">
+        <h3><a href="https://kaminczak.github.io/TEKS-Glossary/">TEKS Curriculum Library</a></h3>
+        <p>All 278 English I&ndash;IV student expectations, each with a plain-language overview, a student-facing translation, ten or more assessment-phrased question stems, vertical alignment to the grades above and below, and the misconceptions that actually show up. Tagged by DOK level, Bloom's, and strand. Video walkthroughs in production.</p>
+        <span class="host">React · in final review</span>
+      </article>
+
+      <article class="work">
+        <h3>Kaizen Vault</h3>
+        <p>A working AI content pipeline: Claude Code and MCP servers running retrieval across a 19,000-document archive, with custom document-processing scripts. Built FERPA-aware from the start.</p>
+        <span class="host">Private · walkthrough on request</span>
+      </article>
+    </div>
+  </section>
+
+  <hr />
+
+  <section class="row contact">
+    <div class="note">Contact</div>
+    <div>
+      <h2>Get in touch</h2>
+      <p>Houston, TX &mdash; open to remote</p>
+      <p><a href="mailto:kaminczak@gmail.com">kaminczak@gmail.com</a></p>
+      <p>(979) 436-5969</p>
+      <p class="cv" style="margin-top:1.5rem"><a href="cv.html">Full CV</a></p>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
