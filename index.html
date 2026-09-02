@@ -135,6 +135,22 @@
     padding-bottom:2px;
   }
   .cv a:hover{border-bottom-color:var(--pen)}
+  .cta{
+    display:inline-block;
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.95rem;
+    font-weight:500;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--paper,#fff);
+    background:var(--ink);
+    padding:.7rem 1.4rem;
+    margin-top:1.4rem;
+    border-radius:3px;
+    transition:background .18s ease;
+  }
+  .cta:hover,.cta:focus-visible{background:var(--pen);color:#fff}
 </style>
 </head>
 <body>
@@ -146,6 +162,7 @@
       <h1>Steve&nbsp;Kaminczak</h1>
       <p class="lede">I design English language arts curriculum &mdash; and I <em>build the tools it runs on</em>.</p>
       <p class="thesis">Twenty-five years teaching ELA; now building with AI. It isn't a replacement for educators &mdash; it hands a teacher the software team they were never going to get, and the limits stop being technical and become the only ones worth having.</p>
+      <a class="cta" href="cv.html">View Full CV &rarr;</a>
     </div>
   </header>
 
@@ -185,7 +202,7 @@
       <p>Houston, TX &mdash; open to remote</p>
       <p><a href="mailto:kaminczak@gmail.com">kaminczak@gmail.com</a></p>
       <p>(979) 436-5969</p>
-      <p class="cv" style="margin-top:1.5rem"><a href="cv.html">Full CV</a></p>
+      <p class="cv" style="margin-top:1.5rem"><a class="cta" style="margin-top:.5rem" href="cv.html">View Full CV &rarr;</a></p>
     </div>
   </section>
 
